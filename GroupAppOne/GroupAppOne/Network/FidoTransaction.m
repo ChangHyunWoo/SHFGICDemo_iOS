@@ -70,7 +70,7 @@
     [tr putValue:onePassManager.deviceId forBody:@"deviceId"];
     [tr putValue:onePassManager.facetId forBody:@"appId"];
 
-    //=========== 인증장치 타입 ===========
+    //=========== 인증장치 타입 ============
     //  (변경 된 다른 코드 보내기 위해)
     if(_verifyType)
         [tr putValue:_verifyType forBody:@"verifyType"];
