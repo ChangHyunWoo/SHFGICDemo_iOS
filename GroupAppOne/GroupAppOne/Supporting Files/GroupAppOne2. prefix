@@ -1,0 +1,21 @@
+//
+//  GroupAppOne. prefix.h
+//  GroupAppOne
+//
+//  Created by INBEOM on 2018. 3. 7..
+//  Copyright © 2018년 두베아이맥. All rights reserved.
+//
+
+#define Prefix(str) @"Prefix" str
+
+#import "CommonZone.h"
+#import "FidoTransaction.h"
+#import "UIView+RNActivityView.h"
+#import "CertificateManager.h"
+
+#ifndef GroupAppOne__prefix_h
+#define GroupAppOne__prefix_h
+
+
+#endif /* GroupAppOne__prefix_h */
+

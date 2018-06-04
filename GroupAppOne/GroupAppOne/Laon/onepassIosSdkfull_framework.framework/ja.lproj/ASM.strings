@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "1개의 인증방식을 선택할 수 있습니다. \n[다음] 버튼을 누르면 선택한 인증방식 별 등록 과정이 진행됩니다."; ObjectID = "NRQ-Pc-y9R"; */
+"NRQ-Pc-y9R.text" = "認証方式を選択してください。\n[次へ]ボタンを押すと、選択した認証方式の登録手順に進みます。";
+
+/* Class = "UILabel"; text = "Choose authentication type"; ObjectID = "c52-se-uI4"; */
+"c52-se-uI4.text" = "認証方式を選択してください。";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "f9e-Nl-VYx"; */
+"f9e-Nl-VYx.normalTitle" = "次へ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "iJY-Kn-tqV"; */
+"iJY-Kn-tqV.normalTitle" = "キャンセル";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "nUw-W4-LCU"; */
+"nUw-W4-LCU.normalTitle" = "キャンセル";
+
+/* Class = "UILabel"; text = "Processing"; ObjectID = "zFd-Ua-eJh"; */
+"zFd-Ua-eJh.text" = "認証の進行中";

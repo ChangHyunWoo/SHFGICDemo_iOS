@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Seleccione un método de autenticación. Presione el botón [Siguiente] para continuar con el proceso de registro con el autenticador seleccionado."; ObjectID = "NRQ-Pc-y9R"; */
+"NRQ-Pc-y9R.text" = "Seleccione un método de autenticación. Presione el botón [Siguiente] para continuar con el proceso de registro con el autenticador seleccionado.";
+
+/* Class = "UILabel"; text = "Seleccionar tipo de autenticación"; ObjectID = "c52-se-uI4"; */
+"c52-se-uI4.text" = "Seleccionar tipo de autenticación";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "f9e-Nl-VYx"; */
+"f9e-Nl-VYx.normalTitle" = "Siguiente";
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "iJY-Kn-tqV"; */
+"iJY-Kn-tqV.normalTitle" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "nUw-W4-LCU"; */
+"nUw-W4-LCU.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Autenticación en progreso."; ObjectID = "zFd-Ua-eJh"; */
+"zFd-Ua-eJh.text" = "Autenticación en progreso.";

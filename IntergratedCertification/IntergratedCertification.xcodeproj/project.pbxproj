@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5729F8A22033ED5200908A8B /* SHICConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5729F8A02033ED5200908A8B /* SHICConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5729F8A32033ED5200908A8B /* SHICConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5729F8A12033ED5200908A8B /* SHICConstants.m */; };
+		5729F8A6203419AB00908A8B /* SHICProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 5729F8A4203419AB00908A8B /* SHICProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5729F8A7203419AB00908A8B /* SHICProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5729F8A5203419AB00908A8B /* SHICProperty.m */; };
+		5729F8C6203AA83900908A8B /* SHICTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 5729F8C4203AA83900908A8B /* SHICTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5729F8C7203AA83900908A8B /* SHICTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5729F8C5203AA83900908A8B /* SHICTransaction.m */; };
+		5729F8CC203BFBCA00908A8B /* SHICAPISession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5729F8CA203BFBCA00908A8B /* SHICAPISession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5729F8CD203BFBCA00908A8B /* SHICAPISession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5729F8CB203BFBCA00908A8B /* SHICAPISession.m */; };
+		576452F7202C53760056D08A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576452F6202C53760056D08A /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5774C4F1203D47E600A9F8CB /* SHICUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5774C4EF203D47E600A9F8CB /* SHICUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5774C4F2203D47E600A9F8CB /* SHICUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5774C4F0203D47E600A9F8CB /* SHICUser.m */; };
+		57A3F4B8202B096C006B0148 /* SHICMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 57A3F4B7202B096C006B0148 /* SHICMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57C00B5C208048A300818B32 /* SHICSSOManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C00B5A208048A200818B32 /* SHICSSOManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57C00B5D208048A300818B32 /* SHICSSOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C00B5B208048A200818B32 /* SHICSSOManager.m */; };
+		57C00B64208048AA00818B32 /* CryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C00B5F208048AA00818B32 /* CryptoUtil.m */; };
+		57C00B65208048AA00818B32 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C00B61208048AA00818B32 /* NSData+Base64.h */; };
+		57C00B66208048AA00818B32 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C00B62208048AA00818B32 /* NSData+Base64.m */; };
+		57C00B67208048AA00818B32 /* CryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C00B63208048AA00818B32 /* CryptoUtil.h */; };
+		57D652272021799A00A19036 /* CXICDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D6520E2021799A00A19036 /* CXICDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D652282021799A00A19036 /* CXICDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D6520F2021799A00A19036 /* CXICDownloader.m */; };
+		57D652292021799A00A19036 /* CXICNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652102021799A00A19036 /* CXICNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D6522A2021799A00A19036 /* CXICNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652112021799A00A19036 /* CXICNetwork.m */; };
+		57D6522B2021799A00A19036 /* CXICNetworkError.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652122021799A00A19036 /* CXICNetworkError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D6522C2021799A00A19036 /* CXICNetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652132021799A00A19036 /* CXICNetworkError.m */; };
+		57D6522D2021799A00A19036 /* CXICSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652142021799A00A19036 /* CXICSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D6522E2021799A00A19036 /* CXICSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652152021799A00A19036 /* CXICSession.m */; };
+		57D6522F2021799A00A19036 /* CXICSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652162021799A00A19036 /* CXICSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D652302021799A00A19036 /* CXICSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652172021799A00A19036 /* CXICSocket.m */; };
+		57D652312021799A00A19036 /* CXICTCPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652182021799A00A19036 /* CXICTCPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D652322021799A00A19036 /* CXICTCPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652192021799A00A19036 /* CXICTCPSession.m */; };
+		57D652332021799A00A19036 /* CXICTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D6521A2021799A00A19036 /* CXICTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D652342021799A00A19036 /* CXICTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D6521B2021799A00A19036 /* CXICTransaction.m */; };
+		57D652352021799A00A19036 /* CXICURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D6521C2021799A00A19036 /* CXICURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D652362021799A00A19036 /* CXICURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D6521D2021799A00A19036 /* CXICURLSession.m */; };
+		57D652372021799A00A19036 /* CXICURLTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D6521E2021799A00A19036 /* CXICURLTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D652382021799A00A19036 /* CXICURLTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D6521F2021799A00A19036 /* CXICURLTransaction.m */; };
+		57D652392021799A00A19036 /* NSString+CXICNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652202021799A00A19036 /* NSString+CXICNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D6523A2021799A00A19036 /* NSString+CXICNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652212021799A00A19036 /* NSString+CXICNetwork.m */; };
+		57D6523B2021799A00A19036 /* CXEnhancedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652232021799A00A19036 /* CXEnhancedImageView.h */; };
+		57D6523C2021799A00A19036 /* CXEnhancedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652242021799A00A19036 /* CXEnhancedImageView.m */; };
+		57D6523D2021799A00A19036 /* CXSlotAnimatedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D652252021799A00A19036 /* CXSlotAnimatedLabel.h */; };
+		57D6523E2021799A00A19036 /* CXSlotAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D652262021799A00A19036 /* CXSlotAnimatedLabel.m */; };
+		57F6744B2018A6490020036E /* IntergratedCertification.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F674492018A6490020036E /* IntergratedCertification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57F674532018A6E00020036E /* IntCertInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F674512018A6E00020036E /* IntCertInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57F674542018A6E00020036E /* IntCertInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F674522018A6E00020036E /* IntCertInterface.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5729F8A02033ED5200908A8B /* SHICConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICConstants.h; sourceTree = "<group>"; };
+		5729F8A12033ED5200908A8B /* SHICConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHICConstants.m; sourceTree = "<group>"; };
+		5729F8A4203419AB00908A8B /* SHICProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICProperty.h; sourceTree = "<group>"; };
+		5729F8A5203419AB00908A8B /* SHICProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHICProperty.m; sourceTree = "<group>"; };
+		5729F8C4203AA83900908A8B /* SHICTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICTransaction.h; sourceTree = "<group>"; };
+		5729F8C5203AA83900908A8B /* SHICTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHICTransaction.m; sourceTree = "<group>"; };
+		5729F8CA203BFBCA00908A8B /* SHICAPISession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICAPISession.h; sourceTree = "<group>"; };
+		5729F8CB203BFBCA00908A8B /* SHICAPISession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHICAPISession.m; sourceTree = "<group>"; };
+		576452F6202C53760056D08A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		5774C4EF203D47E600A9F8CB /* SHICUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICUser.h; sourceTree = "<group>"; };
+		5774C4F0203D47E600A9F8CB /* SHICUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHICUser.m; sourceTree = "<group>"; };
+		57A3F4B7202B096C006B0148 /* SHICMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICMacro.h; sourceTree = "<group>"; };
+		57C00B5A208048A200818B32 /* SHICSSOManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHICSSOManager.h; sourceTree = "<group>"; };
+		57C00B5B208048A200818B32 /* SHICSSOManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHICSSOManager.m; sourceTree = "<group>"; };
+		57C00B5F208048AA00818B32 /* CryptoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoUtil.m; sourceTree = "<group>"; };
+		57C00B61208048AA00818B32 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		57C00B62208048AA00818B32 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		57C00B63208048AA00818B32 /* CryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoUtil.h; sourceTree = "<group>"; };
+		57D6520E2021799A00A19036 /* CXICDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICDownloader.h; sourceTree = "<group>"; };
+		57D6520F2021799A00A19036 /* CXICDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICDownloader.m; sourceTree = "<group>"; };
+		57D652102021799A00A19036 /* CXICNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICNetwork.h; sourceTree = "<group>"; };
+		57D652112021799A00A19036 /* CXICNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICNetwork.m; sourceTree = "<group>"; };
+		57D652122021799A00A19036 /* CXICNetworkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICNetworkError.h; sourceTree = "<group>"; };
+		57D652132021799A00A19036 /* CXICNetworkError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICNetworkError.m; sourceTree = "<group>"; };
+		57D652142021799A00A19036 /* CXICSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICSession.h; sourceTree = "<group>"; };
+		57D652152021799A00A19036 /* CXICSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICSession.m; sourceTree = "<group>"; };
+		57D652162021799A00A19036 /* CXICSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICSocket.h; sourceTree = "<group>"; };
+		57D652172021799A00A19036 /* CXICSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICSocket.m; sourceTree = "<group>"; };
+		57D652182021799A00A19036 /* CXICTCPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICTCPSession.h; sourceTree = "<group>"; };
+		57D652192021799A00A19036 /* CXICTCPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICTCPSession.m; sourceTree = "<group>"; };
+		57D6521A2021799A00A19036 /* CXICTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICTransaction.h; sourceTree = "<group>"; };
+		57D6521B2021799A00A19036 /* CXICTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICTransaction.m; sourceTree = "<group>"; };
+		57D6521C2021799A00A19036 /* CXICURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICURLSession.h; sourceTree = "<group>"; };
+		57D6521D2021799A00A19036 /* CXICURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICURLSession.m; sourceTree = "<group>"; };
+		57D6521E2021799A00A19036 /* CXICURLTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXICURLTransaction.h; sourceTree = "<group>"; };
+		57D6521F2021799A00A19036 /* CXICURLTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXICURLTransaction.m; sourceTree = "<group>"; };
+		57D652202021799A00A19036 /* NSString+CXICNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CXICNetwork.h"; sourceTree = "<group>"; };
+		57D652212021799A00A19036 /* NSString+CXICNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CXICNetwork.m"; sourceTree = "<group>"; };
+		57D652232021799A00A19036 /* CXEnhancedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXEnhancedImageView.h; sourceTree = "<group>"; };
+		57D652242021799A00A19036 /* CXEnhancedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXEnhancedImageView.m; sourceTree = "<group>"; };
+		57D652252021799A00A19036 /* CXSlotAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSlotAnimatedLabel.h; sourceTree = "<group>"; };
+		57D652262021799A00A19036 /* CXSlotAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSlotAnimatedLabel.m; sourceTree = "<group>"; };
+		57F674462018A6490020036E /* IntergratedCertification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IntergratedCertification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F674492018A6490020036E /* IntergratedCertification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntergratedCertification.h; sourceTree = "<group>"; };
+		57F6744A2018A6490020036E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F674512018A6E00020036E /* IntCertInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntCertInterface.h; sourceTree = "<group>"; };
+		57F674522018A6E00020036E /* IntCertInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntCertInterface.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57F674422018A6490020036E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576452F7202C53760056D08A /* AssetsLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		576452F5202C53760056D08A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				576452F6202C53760056D08A /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57A3F4B0202B08C6006B0148 /* SHIC */ = {
+			isa = PBXGroup;
+			children = (
+				57C00B5E208048AA00818B32 /* Util */,
+				5774C4EF203D47E600A9F8CB /* SHICUser.h */,
+				5774C4F0203D47E600A9F8CB /* SHICUser.m */,
+				5729F8A02033ED5200908A8B /* SHICConstants.h */,
+				5729F8A12033ED5200908A8B /* SHICConstants.m */,
+				57A3F4B1202B08C6006B0148 /* core */,
+				57A3F4B6202B08C6006B0148 /* view */,
+				57A3F4B7202B096C006B0148 /* SHICMacro.h */,
+				5729F8A4203419AB00908A8B /* SHICProperty.h */,
+				5729F8A5203419AB00908A8B /* SHICProperty.m */,
+			);
+			path = SHIC;
+			sourceTree = "<group>";
+		};
+		57A3F4B1202B08C6006B0148 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				57C00B59208048A200818B32 /* SSO */,
+				57A3F4B2202B08C6006B0148 /* action */,
+				57A3F4B4202B08C6006B0148 /* network */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		57A3F4B2202B08C6006B0148 /* action */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = action;
+			sourceTree = "<group>";
+		};
+		57A3F4B4202B08C6006B0148 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				5729F8CA203BFBCA00908A8B /* SHICAPISession.h */,
+				5729F8CB203BFBCA00908A8B /* SHICAPISession.m */,
+				5729F8C4203AA83900908A8B /* SHICTransaction.h */,
+				5729F8C5203AA83900908A8B /* SHICTransaction.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		57A3F4B6202B08C6006B0148 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		57C00B59208048A200818B32 /* SSO */ = {
+			isa = PBXGroup;
+			children = (
+				57C00B5A208048A200818B32 /* SHICSSOManager.h */,
+				57C00B5B208048A200818B32 /* SHICSSOManager.m */,
+			);
+			path = SSO;
+			sourceTree = "<group>";
+		};
+		57C00B5E208048AA00818B32 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				57C00B5F208048AA00818B32 /* CryptoUtil.m */,
+				57C00B60208048AA00818B32 /* NSData(Base64) */,
+				57C00B63208048AA00818B32 /* CryptoUtil.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		57C00B60208048AA00818B32 /* NSData(Base64) */ = {
+			isa = PBXGroup;
+			children = (
+				57C00B61208048AA00818B32 /* NSData+Base64.h */,
+				57C00B62208048AA00818B32 /* NSData+Base64.m */,
+			);
+			path = "NSData(Base64)";
+			sourceTree = "<group>";
+		};
+		57D6520C2021799A00A19036 /* CXICFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				57D6520D2021799A00A19036 /* CXICNetwork */,
+				57D652222021799A00A19036 /* widget */,
+			);
+			name = CXICFoundation;
+			path = CXFoundation;
+			sourceTree = "<group>";
+		};
+		57D6520D2021799A00A19036 /* CXICNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				57D6520E2021799A00A19036 /* CXICDownloader.h */,
+				57D6520F2021799A00A19036 /* CXICDownloader.m */,
+				57D652102021799A00A19036 /* CXICNetwork.h */,
+				57D652112021799A00A19036 /* CXICNetwork.m */,
+				57D652122021799A00A19036 /* CXICNetworkError.h */,
+				57D652132021799A00A19036 /* CXICNetworkError.m */,
+				57D652142021799A00A19036 /* CXICSession.h */,
+				57D652152021799A00A19036 /* CXICSession.m */,
+				57D652162021799A00A19036 /* CXICSocket.h */,
+				57D652172021799A00A19036 /* CXICSocket.m */,
+				57D652182021799A00A19036 /* CXICTCPSession.h */,
+				57D652192021799A00A19036 /* CXICTCPSession.m */,
+				57D6521A2021799A00A19036 /* CXICTransaction.h */,
+				57D6521B2021799A00A19036 /* CXICTransaction.m */,
+				57D6521C2021799A00A19036 /* CXICURLSession.h */,
+				57D6521D2021799A00A19036 /* CXICURLSession.m */,
+				57D6521E2021799A00A19036 /* CXICURLTransaction.h */,
+				57D6521F2021799A00A19036 /* CXICURLTransaction.m */,
+				57D652202021799A00A19036 /* NSString+CXICNetwork.h */,
+				57D652212021799A00A19036 /* NSString+CXICNetwork.m */,
+			);
+			name = CXICNetwork;
+			path = CXNetwork;
+			sourceTree = "<group>";
+		};
+		57D652222021799A00A19036 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				57D652232021799A00A19036 /* CXEnhancedImageView.h */,
+				57D652242021799A00A19036 /* CXEnhancedImageView.m */,
+				57D652252021799A00A19036 /* CXSlotAnimatedLabel.h */,
+				57D652262021799A00A19036 /* CXSlotAnimatedLabel.m */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
+		57F6743C2018A6490020036E = {
+			isa = PBXGroup;
+			children = (
+				57F674482018A6490020036E /* IntergratedCertification */,
+				57F674472018A6490020036E /* Products */,
+				576452F5202C53760056D08A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57F674472018A6490020036E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57F674462018A6490020036E /* IntergratedCertification.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57F674482018A6490020036E /* IntergratedCertification */ = {
+			isa = PBXGroup;
+			children = (
+				57A3F4B0202B08C6006B0148 /* SHIC */,
+				57D6520C2021799A00A19036 /* CXICFoundation */,
+				57F674492018A6490020036E /* IntergratedCertification.h */,
+				57F6744A2018A6490020036E /* Info.plist */,
+				57F674512018A6E00020036E /* IntCertInterface.h */,
+				57F674522018A6E00020036E /* IntCertInterface.m */,
+			);
+			path = IntergratedCertification;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		57F674432018A6490020036E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D6522D2021799A00A19036 /* CXICSession.h in Headers */,
+				5729F8A22033ED5200908A8B /* SHICConstants.h in Headers */,
+				5729F8C6203AA83900908A8B /* SHICTransaction.h in Headers */,
+				57D6523D2021799A00A19036 /* CXSlotAnimatedLabel.h in Headers */,
+				57A3F4B8202B096C006B0148 /* SHICMacro.h in Headers */,
+				57F674532018A6E00020036E /* IntCertInterface.h in Headers */,
+				57D652352021799A00A19036 /* CXICURLSession.h in Headers */,
+				57D6523B2021799A00A19036 /* CXEnhancedImageView.h in Headers */,
+				57D652312021799A00A19036 /* CXICTCPSession.h in Headers */,
+				5774C4F1203D47E600A9F8CB /* SHICUser.h in Headers */,
+				57F6744B2018A6490020036E /* IntergratedCertification.h in Headers */,
+				57D652292021799A00A19036 /* CXICNetwork.h in Headers */,
+				57D652392021799A00A19036 /* NSString+CXICNetwork.h in Headers */,
+				57C00B5C208048A300818B32 /* SHICSSOManager.h in Headers */,
+				5729F8A6203419AB00908A8B /* SHICProperty.h in Headers */,
+				57C00B65208048AA00818B32 /* NSData+Base64.h in Headers */,
+				5729F8CC203BFBCA00908A8B /* SHICAPISession.h in Headers */,
+				57D6522B2021799A00A19036 /* CXICNetworkError.h in Headers */,
+				57D6522F2021799A00A19036 /* CXICSocket.h in Headers */,
+				57D652372021799A00A19036 /* CXICURLTransaction.h in Headers */,
+				57D652272021799A00A19036 /* CXICDownloader.h in Headers */,
+				57C00B67208048AA00818B32 /* CryptoUtil.h in Headers */,
+				57D652332021799A00A19036 /* CXICTransaction.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		57F674452018A6490020036E /* IntergratedCertification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57F6744E2018A6490020036E /* Build configuration list for PBXNativeTarget "IntergratedCertification" */;
+			buildPhases = (
+				57F674412018A6490020036E /* Sources */,
+				57F674422018A6490020036E /* Frameworks */,
+				57F674432018A6490020036E /* Headers */,
+				57F674442018A6490020036E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntergratedCertification;
+			productName = IntergratedCertification;
+			productReference = 57F674462018A6490020036E /* IntergratedCertification.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57F6743D2018A6490020036E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					57F674452018A6490020036E = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 57F674402018A6490020036E /* Build configuration list for PBXProject "IntergratedCertification" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 57F6743C2018A6490020036E;
+			productRefGroup = 57F674472018A6490020036E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57F674452018A6490020036E /* IntergratedCertification */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57F674442018A6490020036E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57F674412018A6490020036E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5774C4F2203D47E600A9F8CB /* SHICUser.m in Sources */,
+				57D6523E2021799A00A19036 /* CXSlotAnimatedLabel.m in Sources */,
+				5729F8A7203419AB00908A8B /* SHICProperty.m in Sources */,
+				57F674542018A6E00020036E /* IntCertInterface.m in Sources */,
+				57D652362021799A00A19036 /* CXICURLSession.m in Sources */,
+				57D652302021799A00A19036 /* CXICSocket.m in Sources */,
+				57D652322021799A00A19036 /* CXICTCPSession.m in Sources */,
+				57D652342021799A00A19036 /* CXICTransaction.m in Sources */,
+				57D652382021799A00A19036 /* CXICURLTransaction.m in Sources */,
+				57C00B5D208048A300818B32 /* SHICSSOManager.m in Sources */,
+				5729F8CD203BFBCA00908A8B /* SHICAPISession.m in Sources */,
+				57D6522E2021799A00A19036 /* CXICSession.m in Sources */,
+				5729F8C7203AA83900908A8B /* SHICTransaction.m in Sources */,
+				57D6523C2021799A00A19036 /* CXEnhancedImageView.m in Sources */,
+				57C00B64208048AA00818B32 /* CryptoUtil.m in Sources */,
+				57D652282021799A00A19036 /* CXICDownloader.m in Sources */,
+				57D6522C2021799A00A19036 /* CXICNetworkError.m in Sources */,
+				57C00B66208048AA00818B32 /* NSData+Base64.m in Sources */,
+				57D6522A2021799A00A19036 /* CXICNetwork.m in Sources */,
+				5729F8A32033ED5200908A8B /* SHICConstants.m in Sources */,
+				57D6523A2021799A00A19036 /* NSString+CXICNetwork.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		57F6744C2018A6490020036E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57F6744D2018A6490020036E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		57F6744F2018A6490020036E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = IntergratedCertification/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinhan.IntergratedCertification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		57F674502018A6490020036E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = IntergratedCertification/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinhan.IntergratedCertification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57F674402018A6490020036E /* Build configuration list for PBXProject "IntergratedCertification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F6744C2018A6490020036E /* Debug */,
+				57F6744D2018A6490020036E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57F6744E2018A6490020036E /* Build configuration list for PBXNativeTarget "IntergratedCertification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F6744F2018A6490020036E /* Debug */,
+				57F674502018A6490020036E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57F6743D2018A6490020036E /* Project object */;
+}

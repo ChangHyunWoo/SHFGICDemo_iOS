@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationUseViewController">
+            <connections>
+                <outlet property="btnRegist" destination="tiV-B1-dpj" id="qYT-tZ-MeS"/>
+                <outlet property="view" destination="K4n-YH-lTZ" id="eMf-tv-ice"/>
+                <outlet property="viewBodyLayout" destination="dyH-Yu-FsG" id="w8w-Qg-e8x"/>
+                <outlet property="viewBottomLayout" destination="kZx-H6-Ugn" id="f4j-sd-hQM"/>
+                <outlet property="viewContents" destination="jAY-GQ-zr7" id="f1T-av-U0m"/>
+                <outlet property="viewFlexible" destination="1kD-PL-Rux" id="QbO-yn-hXw"/>
+                <outlet property="viewTopLayout" destination="RAA-LA-tmO" id="c7b-17-bjh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K4n-YH-lTZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAA-LA-tmO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="MFg-Nj-4NX"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-Yu-FsG">
+                    <rect key="frame" x="0.0" y="20" width="375" height="582"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kD-PL-Rux">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="XLb-zc-yv6"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAY-GQ-zr7">
+                            <rect key="frame" x="0.0" y="45" width="375" height="537"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="jAY-GQ-zr7" secondAttribute="trailing" id="6ch-sw-TPP"/>
+                        <constraint firstAttribute="bottom" secondItem="jAY-GQ-zr7" secondAttribute="bottom" id="DIH-WO-zYh"/>
+                        <constraint firstAttribute="trailing" secondItem="1kD-PL-Rux" secondAttribute="trailing" id="jDK-R3-O1C"/>
+                        <constraint firstItem="1kD-PL-Rux" firstAttribute="leading" secondItem="dyH-Yu-FsG" secondAttribute="leading" id="nJc-yB-0SJ"/>
+                        <constraint firstItem="jAY-GQ-zr7" firstAttribute="top" secondItem="1kD-PL-Rux" secondAttribute="bottom" id="oev-xk-DvD"/>
+                        <constraint firstItem="1kD-PL-Rux" firstAttribute="top" secondItem="dyH-Yu-FsG" secondAttribute="top" id="pnE-OC-rMN"/>
+                        <constraint firstItem="jAY-GQ-zr7" firstAttribute="leading" secondItem="dyH-Yu-FsG" secondAttribute="leading" id="req-HE-Yki"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZx-H6-Ugn">
+                    <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiV-B1-dpj">
+                            <rect key="frame" x="15" y="10" width="345" height="40"/>
+                            <color key="backgroundColor" red="0.086274509803921567" green="0.10980392156862745" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.086274509803921567" green="0.10980392156862745" blue="0.3466796875" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="신한통합인증 가입">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="joinTouchUpInside:" destination="-1" eventType="touchUpInside" id="0n5-Wo-dfM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tiV-B1-dpj" firstAttribute="leading" secondItem="kZx-H6-Ugn" secondAttribute="leading" constant="15" id="0WZ-eL-kOf"/>
+                        <constraint firstAttribute="bottom" secondItem="tiV-B1-dpj" secondAttribute="bottom" constant="15" id="2TW-iq-jxb"/>
+                        <constraint firstAttribute="trailing" secondItem="tiV-B1-dpj" secondAttribute="trailing" constant="15" id="3ss-gI-xs7"/>
+                        <constraint firstAttribute="height" constant="65" id="DQs-HL-n7P"/>
+                        <constraint firstItem="tiV-B1-dpj" firstAttribute="top" secondItem="kZx-H6-Ugn" secondAttribute="top" constant="10" id="pRI-Wa-VfT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dyH-Yu-FsG" secondAttribute="trailing" id="0Sd-rZ-0Ly"/>
+                <constraint firstItem="kZx-H6-Ugn" firstAttribute="leading" secondItem="K4n-YH-lTZ" secondAttribute="leading" id="5Fy-IZ-xG9"/>
+                <constraint firstItem="RAA-LA-tmO" firstAttribute="leading" secondItem="K4n-YH-lTZ" secondAttribute="leading" id="9K6-TC-Fxv"/>
+                <constraint firstItem="kZx-H6-Ugn" firstAttribute="top" secondItem="dyH-Yu-FsG" secondAttribute="bottom" id="HWi-ht-PDZ"/>
+                <constraint firstAttribute="bottom" secondItem="kZx-H6-Ugn" secondAttribute="bottom" id="OR1-r7-Hyn"/>
+                <constraint firstAttribute="trailing" secondItem="RAA-LA-tmO" secondAttribute="trailing" id="Tr1-ov-Jam"/>
+                <constraint firstItem="dyH-Yu-FsG" firstAttribute="leading" secondItem="K4n-YH-lTZ" secondAttribute="leading" id="Vh1-9x-f7k"/>
+                <constraint firstItem="RAA-LA-tmO" firstAttribute="top" secondItem="K4n-YH-lTZ" secondAttribute="top" id="aoy-hv-R74"/>
+                <constraint firstAttribute="trailing" secondItem="kZx-H6-Ugn" secondAttribute="trailing" id="hDu-EB-YmH"/>
+                <constraint firstItem="dyH-Yu-FsG" firstAttribute="top" secondItem="RAA-LA-tmO" secondAttribute="bottom" id="kd5-Bq-gsx"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

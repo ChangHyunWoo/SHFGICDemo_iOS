@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAuthorizationViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBodyLayout" destination="JsP-pK-g18" id="c12-JU-iaE"/>
+                <outlet property="viewBottomLayout" destination="jTq-JJ-bHM" id="63M-Ad-y83"/>
+                <outlet property="viewBottomLayoutHeightConstraint" destination="lXG-Wa-Cje" id="HjE-dR-Zps"/>
+                <outlet property="viewContents" destination="hNZ-ZM-PeS" id="d8K-Bx-8zW"/>
+                <outlet property="viewFlexible" destination="eLd-dd-GMS" id="zdO-zn-yCJ"/>
+                <outlet property="viewTopLayout" destination="sfC-WF-fgW" id="idU-JK-oFo"/>
+                <outlet property="viewTopLayoutHeightConstraint" destination="FCC-Qy-VvN" id="yiq-3B-j2H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-WF-fgW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="FCC-Qy-VvN"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-pK-g18">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLd-dd-GMS">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="jy4-Zd-Sam"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNZ-ZM-PeS">
+                            <rect key="frame" x="0.0" y="45" width="375" height="602"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추가 본인 인증은 각 그룹사의 공인인증서에 준하는 인증수단을 적용합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-er-8LK">
+                                    <rect key="frame" x="20" y="20" width="335" height="41"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="■은행:   - 계좌비밀번호 + 보안매체 ■카드:  - 공인인증서(TBD) ■금투:  - 계좌비밀번호 + 보안매체  - 고객정보(생년월일/이메일/휴대폰번호) ■생명:  - 신분증인증/보안매체/카카오인증  - 공인인증서" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKP-aP-yS7">
+                                    <rect key="frame" x="20" y="314" width="335" height="203"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_idok.png" translatesAutoresizingMaskIntoConstraints="NO" id="slT-nX-n9i">
+                                    <rect key="frame" x="138" y="223" width="99" height="71"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-Gh-aUs">
+                                    <rect key="frame" x="15" y="547" width="345" height="40"/>
+                                    <color key="backgroundColor" red="0.086274509803921567" green="0.10980392156862745" blue="0.20827716503267968" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="c1B-BT-RKO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="확인"/>
+                                    <connections>
+                                        <action selector="confirmTouchUpInside:" destination="-1" eventType="touchUpInside" id="ezO-Ud-1mZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="bQg-er-8LK" firstAttribute="leading" secondItem="hNZ-ZM-PeS" secondAttribute="leading" constant="20" id="6uK-ap-Bsb"/>
+                                <constraint firstAttribute="trailing" secondItem="xKP-aP-yS7" secondAttribute="trailing" constant="20" id="7F9-yD-eri"/>
+                                <constraint firstAttribute="bottom" secondItem="eS9-Gh-aUs" secondAttribute="bottom" constant="15" id="Gej-J1-HIE"/>
+                                <constraint firstItem="eS9-Gh-aUs" firstAttribute="top" secondItem="xKP-aP-yS7" secondAttribute="bottom" constant="30" id="INS-uf-rgK"/>
+                                <constraint firstItem="xKP-aP-yS7" firstAttribute="leading" secondItem="hNZ-ZM-PeS" secondAttribute="leading" constant="20" id="MY2-Lk-9aX"/>
+                                <constraint firstItem="xKP-aP-yS7" firstAttribute="top" secondItem="slT-nX-n9i" secondAttribute="bottom" constant="20" id="NIe-kK-agj"/>
+                                <constraint firstAttribute="trailing" secondItem="bQg-er-8LK" secondAttribute="trailing" constant="20" id="VHD-u6-Vgz"/>
+                                <constraint firstItem="slT-nX-n9i" firstAttribute="centerX" secondItem="hNZ-ZM-PeS" secondAttribute="centerX" id="agX-vw-jij"/>
+                                <constraint firstAttribute="trailing" secondItem="eS9-Gh-aUs" secondAttribute="trailing" constant="15" id="bcE-XG-Gp1"/>
+                                <constraint firstItem="eS9-Gh-aUs" firstAttribute="leading" secondItem="hNZ-ZM-PeS" secondAttribute="leading" constant="15" id="fy6-zb-rbS"/>
+                                <constraint firstItem="bQg-er-8LK" firstAttribute="top" secondItem="hNZ-ZM-PeS" secondAttribute="top" constant="20" id="hbW-I6-1kl"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="eLd-dd-GMS" firstAttribute="top" secondItem="JsP-pK-g18" secondAttribute="top" id="CZQ-bq-9Mt"/>
+                        <constraint firstItem="eLd-dd-GMS" firstAttribute="leading" secondItem="JsP-pK-g18" secondAttribute="leading" id="FeY-ez-z58"/>
+                        <constraint firstAttribute="trailing" secondItem="hNZ-ZM-PeS" secondAttribute="trailing" id="TuN-6L-nm3"/>
+                        <constraint firstItem="hNZ-ZM-PeS" firstAttribute="top" secondItem="eLd-dd-GMS" secondAttribute="bottom" id="bTv-97-Qjz"/>
+                        <constraint firstAttribute="trailing" secondItem="eLd-dd-GMS" secondAttribute="trailing" id="bci-Lw-GYS"/>
+                        <constraint firstItem="hNZ-ZM-PeS" firstAttribute="leading" secondItem="JsP-pK-g18" secondAttribute="leading" id="kSJ-qV-ev7"/>
+                        <constraint firstAttribute="bottom" secondItem="hNZ-ZM-PeS" secondAttribute="bottom" id="m1f-iS-zns"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTq-JJ-bHM">
+                    <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="lXG-Wa-Cje"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JsP-pK-g18" firstAttribute="top" secondItem="sfC-WF-fgW" secondAttribute="bottom" id="95N-nA-arM"/>
+                <constraint firstItem="sfC-WF-fgW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Flt-sT-HSN"/>
+                <constraint firstItem="jTq-JJ-bHM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JsV-4B-ArF"/>
+                <constraint firstItem="JsP-pK-g18" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LwU-K0-8sk"/>
+                <constraint firstItem="jTq-JJ-bHM" firstAttribute="top" secondItem="JsP-pK-g18" secondAttribute="bottom" id="RiN-KR-VyO"/>
+                <constraint firstAttribute="trailing" secondItem="jTq-JJ-bHM" secondAttribute="trailing" id="Wh6-WQ-L8M"/>
+                <constraint firstAttribute="bottom" secondItem="jTq-JJ-bHM" secondAttribute="bottom" id="cuA-Xn-Cgp"/>
+                <constraint firstAttribute="trailing" secondItem="sfC-WF-fgW" secondAttribute="trailing" id="nAh-21-sxi"/>
+                <constraint firstAttribute="trailing" secondItem="JsP-pK-g18" secondAttribute="trailing" id="wh5-gk-rb4"/>
+                <constraint firstItem="sfC-WF-fgW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yUw-3C-5iq"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_idok.png" width="99" height="71"/>
+    </resources>
+</document>

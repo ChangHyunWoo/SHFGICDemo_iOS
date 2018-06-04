@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectLoginOptionViewController">
+            <connections>
+                <outlet property="cancelBtn" destination="bdh-hp-R1v" id="HQJ-Rh-V08"/>
+                <outlet property="confirmBtn" destination="e3N-Fj-lfw" id="n2d-Md-J09"/>
+                <outlet property="fidoBtn" destination="tHU-vu-x89" id="duK-oK-ItG"/>
+                <outlet property="fidoBtnBack" destination="qbW-nK-SpE" id="q3i-tt-Gq8"/>
+                <outlet property="passwordBtn" destination="5jj-o0-xda" id="sjD-ZC-JdW"/>
+                <outlet property="passwordBtnBack" destination="Lfc-qC-Box" id="TwQ-78-YUm"/>
+                <outlet property="view" destination="mX5-ia-MKg" id="Lpu-Hg-inw"/>
+                <outlet property="viewBodyLayout" destination="Wzn-3d-3Ag" id="ASM-lQ-34a"/>
+                <outlet property="viewBottomLayout" destination="v7i-Nm-YXJ" id="Ov8-6g-kSQ"/>
+                <outlet property="viewContents" destination="lcD-q0-SVK" id="aFY-TJ-RuQ"/>
+                <outlet property="viewFlexible" destination="451-MY-wYq" id="34c-GM-2BP"/>
+                <outlet property="viewTopLayout" destination="rjy-wd-hJS" id="kxm-e0-DAi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mX5-ia-MKg">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-wd-hJS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ovg-Op-a9b"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzn-3d-3Ag">
+                    <rect key="frame" x="0.0" y="20" width="375" height="587"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="451-MY-wYq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="0cG-99-50z"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcD-q0-SVK">
+                            <rect key="frame" x="0.0" y="45" width="375" height="542"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신한통합인증 로그인 설정을 통해 로그인 방식을 변경하실 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-G7-Hh9">
+                                    <rect key="frame" x="12" y="25" width="351" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-qC-Box">
+                                    <rect key="frame" x="12" y="79" width="351" height="60"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="m6B-Fk-20B"/>
+                                    </constraints>
+                                    <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="신한통합인증 비밀번호">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name=".AppleSDGothicNeoI-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="passwordTouchUpInside:" destination="-1" eventType="touchUpInside" id="lQv-Xw-dRw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-o0-xda">
+                                    <rect key="frame" x="315" y="94" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="R46-eS-yJb"/>
+                                        <constraint firstAttribute="width" constant="30" id="xDD-dI-eja"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="radio.png"/>
+                                    <state key="selected" backgroundImage="radio_on.png"/>
+                                    <connections>
+                                        <action selector="passwordTouchUpInside:" destination="-1" eventType="touchUpInside" id="g2M-0H-zEh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbW-nK-SpE">
+                                    <rect key="frame" x="12" y="144" width="351" height="60"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="iuY-o8-xOQ"/>
+                                    </constraints>
+                                    <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="신한통합인증서 지문">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name=".AppleSDGothicNeoI-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <state key="disabled">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="신한통합인증서 지문">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="fidoTouchUpInside:" destination="-1" eventType="touchUpInside" id="hYA-Uz-I7X"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHU-vu-x89">
+                                    <rect key="frame" x="315" y="159" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="2e1-cu-maN"/>
+                                        <constraint firstAttribute="width" constant="30" id="xtU-0D-B6D"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="radio.png"/>
+                                    <state key="selected" backgroundImage="radio_on.png"/>
+                                    <connections>
+                                        <action selector="fidoTouchUpInside:" destination="-1" eventType="touchUpInside" id="qV7-Re-vut"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="Lfc-qC-Box" firstAttribute="leading" secondItem="lcD-q0-SVK" secondAttribute="leading" constant="12" id="Eov-aS-RA5"/>
+                                <constraint firstItem="qbW-nK-SpE" firstAttribute="leading" secondItem="lcD-q0-SVK" secondAttribute="leading" constant="12" id="J5c-5Z-Nbu"/>
+                                <constraint firstItem="qbW-nK-SpE" firstAttribute="trailing" secondItem="tHU-vu-x89" secondAttribute="trailing" constant="18" id="JCc-qn-ZKk"/>
+                                <constraint firstItem="Lfc-qC-Box" firstAttribute="trailing" secondItem="5jj-o0-xda" secondAttribute="trailing" constant="18" id="KSS-yy-S1a"/>
+                                <constraint firstItem="qbW-nK-SpE" firstAttribute="top" secondItem="Lfc-qC-Box" secondAttribute="bottom" constant="5" id="Qch-uC-oNV"/>
+                                <constraint firstItem="Lfc-qC-Box" firstAttribute="top" secondItem="Hpe-G7-Hh9" secondAttribute="bottom" constant="18" id="Svj-RV-cNx"/>
+                                <constraint firstItem="tHU-vu-x89" firstAttribute="centerY" secondItem="qbW-nK-SpE" secondAttribute="centerY" id="gG4-vu-QqC"/>
+                                <constraint firstAttribute="trailing" secondItem="Lfc-qC-Box" secondAttribute="trailing" constant="12" id="grk-8y-vgy"/>
+                                <constraint firstItem="5jj-o0-xda" firstAttribute="centerY" secondItem="Lfc-qC-Box" secondAttribute="centerY" id="kjR-wB-xFo"/>
+                                <constraint firstItem="Hpe-G7-Hh9" firstAttribute="leading" secondItem="lcD-q0-SVK" secondAttribute="leading" constant="12" id="mOb-YK-mrR"/>
+                                <constraint firstAttribute="trailing" secondItem="qbW-nK-SpE" secondAttribute="trailing" constant="12" id="q8f-Wz-DsF"/>
+                                <constraint firstAttribute="trailing" secondItem="Hpe-G7-Hh9" secondAttribute="trailing" constant="12" id="uRM-bM-ZN6"/>
+                                <constraint firstItem="Hpe-G7-Hh9" firstAttribute="top" secondItem="lcD-q0-SVK" secondAttribute="top" constant="25" id="uw3-98-vmd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lcD-q0-SVK" firstAttribute="top" secondItem="451-MY-wYq" secondAttribute="bottom" id="73n-5y-jIk"/>
+                        <constraint firstItem="lcD-q0-SVK" firstAttribute="leading" secondItem="Wzn-3d-3Ag" secondAttribute="leading" id="WrI-4K-pph"/>
+                        <constraint firstAttribute="trailing" secondItem="451-MY-wYq" secondAttribute="trailing" id="Zcv-uz-GU5"/>
+                        <constraint firstAttribute="bottom" secondItem="lcD-q0-SVK" secondAttribute="bottom" id="asI-I3-BXc"/>
+                        <constraint firstItem="451-MY-wYq" firstAttribute="top" secondItem="Wzn-3d-3Ag" secondAttribute="top" id="bB6-J8-pgU"/>
+                        <constraint firstItem="451-MY-wYq" firstAttribute="leading" secondItem="Wzn-3d-3Ag" secondAttribute="leading" id="m3v-Br-zgd"/>
+                        <constraint firstAttribute="trailing" secondItem="lcD-q0-SVK" secondAttribute="trailing" id="mEP-zX-xel"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7i-Nm-YXJ">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="b9e-SO-tYj"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdh-hp-R1v">
+                    <rect key="frame" x="12" y="612" width="172" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="MnG-ej-H4f"/>
+                        <constraint firstAttribute="height" constant="40" id="huI-m4-wlF"/>
+                    </constraints>
+                    <state key="normal" title="취소">
+                        <color key="titleColor" red="0.086274509799999996" green="0.10980392160000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="button_highlightedBack.png"/>
+                    <connections>
+                        <action selector="cancelTouchUpInside:" destination="-1" eventType="touchUpInside" id="NMx-8w-XC9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3N-Fj-lfw">
+                    <rect key="frame" x="191.5" y="612" width="171.5" height="40"/>
+                    <color key="backgroundColor" red="0.086274509799999996" green="0.10980392160000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3VD-8v-l1A"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fz6-6V-DIt"/>
+                    </constraints>
+                    <state key="normal" title="확인" backgroundImage="btn_full_navy.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="button_highlightedBack.png"/>
+                    <connections>
+                        <action selector="confirmTouchUpInside:" destination="-1" eventType="touchUpInside" id="AXU-3p-pWg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e3N-Fj-lfw" secondAttribute="trailing" constant="12" id="3MO-RL-cTh"/>
+                <constraint firstItem="e3N-Fj-lfw" firstAttribute="leading" secondItem="bdh-hp-R1v" secondAttribute="trailing" constant="8" id="3vA-Mz-8WJ"/>
+                <constraint firstAttribute="trailing" secondItem="v7i-Nm-YXJ" secondAttribute="trailing" id="48V-LW-WtI"/>
+                <constraint firstItem="e3N-Fj-lfw" firstAttribute="width" secondItem="bdh-hp-R1v" secondAttribute="width" id="4VV-8Y-HGo"/>
+                <constraint firstItem="Wzn-3d-3Ag" firstAttribute="leading" secondItem="mX5-ia-MKg" secondAttribute="leading" id="6NM-Uz-9fl"/>
+                <constraint firstItem="e3N-Fj-lfw" firstAttribute="leading" secondItem="bdh-hp-R1v" secondAttribute="trailing" constant="8" id="9gF-G7-kg1"/>
+                <constraint firstItem="v7i-Nm-YXJ" firstAttribute="top" secondItem="Wzn-3d-3Ag" secondAttribute="bottom" id="AXe-on-n2Y"/>
+                <constraint firstAttribute="trailing" secondItem="Wzn-3d-3Ag" secondAttribute="trailing" id="C56-jX-Pt7"/>
+                <constraint firstItem="e3N-Fj-lfw" firstAttribute="top" secondItem="Wzn-3d-3Ag" secondAttribute="bottom" constant="5" id="FUA-Gs-9GC"/>
+                <constraint firstItem="Wzn-3d-3Ag" firstAttribute="top" secondItem="rjy-wd-hJS" secondAttribute="bottom" id="FV8-ZW-Z9j"/>
+                <constraint firstAttribute="trailing" secondItem="rjy-wd-hJS" secondAttribute="trailing" id="HZn-nA-eNG"/>
+                <constraint firstItem="bdh-hp-R1v" firstAttribute="leading" secondItem="mX5-ia-MKg" secondAttribute="leading" constant="12" id="Hb4-5h-065"/>
+                <constraint firstItem="bdh-hp-R1v" firstAttribute="top" secondItem="Wzn-3d-3Ag" secondAttribute="bottom" constant="5" id="TCO-KC-Miz"/>
+                <constraint firstAttribute="bottom" secondItem="v7i-Nm-YXJ" secondAttribute="bottom" id="a3x-CS-q3m"/>
+                <constraint firstItem="rjy-wd-hJS" firstAttribute="top" secondItem="mX5-ia-MKg" secondAttribute="top" id="aDG-Ni-Dzn"/>
+                <constraint firstItem="e3N-Fj-lfw" firstAttribute="leading" secondItem="bdh-hp-R1v" secondAttribute="trailing" constant="8" id="fdM-QY-s9S"/>
+                <constraint firstItem="v7i-Nm-YXJ" firstAttribute="leading" secondItem="mX5-ia-MKg" secondAttribute="leading" id="gXX-gi-UQ4"/>
+                <constraint firstItem="rjy-wd-hJS" firstAttribute="leading" secondItem="mX5-ia-MKg" secondAttribute="leading" id="kEC-xS-h8d"/>
+            </constraints>
+            <point key="canvasLocation" x="60.5" y="36.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_full_navy.png" width="22" height="22"/>
+        <image name="button_highlightedBack.png" width="10" height="10"/>
+        <image name="radio.png" width="25" height="25"/>
+        <image name="radio_on.png" width="25" height="25"/>
+    </resources>
+</document>
