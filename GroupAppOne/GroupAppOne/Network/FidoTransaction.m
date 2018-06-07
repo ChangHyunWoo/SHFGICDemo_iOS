@@ -44,7 +44,7 @@
     OnePassManager* onePassManager = [OnePassManager sharedSingleton];
 
     SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-    [tr putUri:@"/shfgic/v1.0/verifyShic"];
+    [tr putUri:@"/shic/verifyShic"];
 
     //=========== 고객 번호(CI) =============
     // (요청 별로 icId | ciNo 분기처리)
@@ -132,7 +132,7 @@
 -(void)inquireCertification:(NSString*)icid
 {
     SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-    [tr putUri:@"/shfgic/v1.0/listShic"];
+    [tr putUri:@"/shic/listShic"];
 
     //=========== 고객 번호(ic) =============
     [tr putValue:icid forBody:@"icId"];
@@ -176,7 +176,7 @@
 -(void)requestPinCheck:(NSString*)pin{
 
     SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-    [tr putUri:@"/shfgic/v1.0/checkPinRule"];
+    [tr putUri:@"/shic/checkPinRule"];
     //[tr putValue:@"requestServiceRegist" forBody:@"command"];
 
     //=========== 간편비밀번호 ===========
@@ -232,7 +232,7 @@
     OnePassManager* onePassManager = [OnePassManager sharedSingleton];
     
     SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-    [tr putUri:@"/shfgic/v1.0/requestFido"];
+    [tr putUri:@"/shic/requestFido"];
 
     //Return Instance Value ( 요청 했던 command Type을 반환)
     self.cmdType=commandType;
@@ -599,7 +599,7 @@
     //OnePassManager* onePassManager = [OnePassManager sharedSingleton];
 
     SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-    [tr putUri:@"/shfgic/v1.0/requestFido"];
+    [tr putUri:@"/shic/requestFido"];
 
     //=========== 요청구분 ===========
     [tr putValue:@"trResultConfirm" forBody:@"command"];
@@ -694,7 +694,7 @@
 -(void)requestSSOData
 {
     SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-    [tr putUri:@"/shfgic/v1.0/getSsoData"];
+    [tr putUri:@"/shic/getSsoData"];
 
 
     //=========== 고객 번호(CI) =============
