@@ -518,7 +518,7 @@
 
         NSMutableDictionary * resultDict = tr.response;
         NSString* userid = [[SHICUser defaultUser] get:KEY_CI];
-        NSString* resultCode = resultDict[@"dataBody"][@"resultCode"];
+        NSString* resultCode = resultDict[@"dataBody"][@"resultCode"] ;//? nil : resultDict[@"dataHeader"][@"resultCode"] ;
         self.rtnicData = resultDict[@"dataBody"][@"icData"];
 
         //성공

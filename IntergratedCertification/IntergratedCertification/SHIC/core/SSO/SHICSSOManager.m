@@ -17,7 +17,7 @@
 -(void)requestSSO:(NSString*)strAPICode setCode:(NSString*)code setTarget:(NSString*)targetID
 {
 //    SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-//    [tr putUri:@"/shfgic/v1.0/verifyShic"];
+//    [tr putUri:@"/shic/v1.0/verifyShic"];
 //
 //    [tr transmitWithFinished:^(SHICTransaction *tr) {
 //        NSMutableDictionary * resultDict = tr.response;
@@ -44,7 +44,7 @@
     NSLog(@"requestSamlToken");
 
 //    SHICTransaction* tr = [[SHICTransaction alloc] initWithDelegate:self];
-//    [tr putUri:@"/shfgic/v1.0/verifyShic"];
+//    [tr putUri:@"/shic/v1.0/verifyShic"];
 //
 //    [tr transmitWithFinished:^(SHICTransaction *tr) {
 //        NSMutableDictionary * resultDict = tr.response;

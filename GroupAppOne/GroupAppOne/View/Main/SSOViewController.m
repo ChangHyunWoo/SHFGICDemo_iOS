@@ -181,6 +181,12 @@
             [tranjection requestSSOData];
         }
         else{
+
+            //======================== 인증서 상태 체크
+//            if(![CertificateManager checkicDataAuth:fidoTransaction.rtnicData] && fidoTransaction.rtnicData){
+//                return;
+//            }
+
             UIViewController *rootController = [[UIApplication sharedApplication] keyWindow].rootViewController;
 
             //=================== 3. 통합인증서 정보가 없는 경우
@@ -196,9 +202,17 @@
                                  handler:^(UIAlertAction * action)
                                  {
                                      [alert dismissViewControllerAnimated:YES completion:nil];
-                                     //================= 설치되지 않았음. 앱스토어로 이동
-                                     NSString *strMsg=[NSString stringWithFormat:@"%@ 스토어 이동",_otherAppScheme];
-                                     RUN_ALERT_PANEL( strMsg  ) ;
+
+                                     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://",_otherAppScheme]];
+
+                                     if( [[UIApplication sharedApplication] canOpenURL:url] == YES ){
+                                         //================= 데이터를 보낸다.
+                                         [[UIApplication sharedApplication] openURL:url];
+                                     }else{
+                                         //================= 설치되지 않았음. 앱스토어로 이동
+                                         NSString *strMsg=[NSString stringWithFormat:@"%@ 스토어 이동",_otherAppScheme];
+                                         RUN_ALERT_PANEL( strMsg  ) ;
+                                     }
 
                                  }];
 
@@ -242,7 +256,6 @@
 - (void)fidoResult:(FidoTransaction*)fidoTransaction
 {
     if(fidoTransaction.isOK){
-
         NSMutableDictionary *userInfo= [UserInfo getUserInfo];
         NSString* icid = [userInfo objectForKey:KEY_ICID];
         NSString* queryStr = [NSString stringWithFormat:@"%@://?%@&ssoData=%@&affiliatesCode=%@&goPage=%@",

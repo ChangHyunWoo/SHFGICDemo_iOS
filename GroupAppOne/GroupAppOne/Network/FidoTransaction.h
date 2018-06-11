@@ -29,7 +29,7 @@
 
 #define SHIC_BIZ_SERVER       @"http://1.237.181.61:8080"
 //#define SHIC_BIZ_SERVER_2     @"http://13.125.27.166:8080"
-#define SHIC_BIZ_SERVER_2 @"http://1.237.181.61:9080"
+#define SHIC_BIZ_SERVER_2 @"http://1.237.181.65:8080"
 
 //그룹사 Domain
 #define SHIC_OAUTH_BANK            @"https://sbk16.shinhan.com"                //신한은행(운영) (OAuth)

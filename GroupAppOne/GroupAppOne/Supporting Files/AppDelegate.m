@@ -261,7 +261,12 @@
         [transaction requestFidoConfirm:(FidoCommandType)requestType];
     }
     else{
-        [CertificateManager checkRequestFido:fidoTransaction];
+        /* 18.06.11 변경
+            SSO 요청 전 앱에서 인증서 상태에 대한 메세지를 출력 함으로, 인증서 상태관련 메세지 대신 실패 메세지 출력.
+         [CertificateManager checkRequestFido:fidoTransaction];
+         */
+        RUN_ALERT_PANEL(@"SSO 인증에 실패 하였습니다.");
+
     }
 }
 
