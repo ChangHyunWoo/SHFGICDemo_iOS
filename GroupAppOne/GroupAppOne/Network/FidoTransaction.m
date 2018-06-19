@@ -368,8 +368,10 @@
 
             //================= SSO(203) 인증 시 ssoData = Pinpwd
             if(commandType == FidoCommandForUserSSOAuth){
+
                 [tr putValue:self.affiliatesCode  forBody:@"affiliatesCode"];
                 [tr putValue:self.ssoData  forBody:@"ssoData"];
+
             }
             else{
                 [tr putValue:[(AppDelegate *)[[UIApplication sharedApplication] delegate] checkPassword1]  forBody:@"pinPwd"];

@@ -235,6 +235,35 @@
 //    NSLog(@"inquireResult : <><><> %@ <><><>",resultData);
 
     if(fidoTransaction.isOK){
+
+        /*
+         {
+         "dataBody": {
+         "icData": {
+         "expiryDate": "20210619",
+         "icId": "812b238915365b66b4af84c058461f03b92b615d1841d69a929fb23166c77354",
+         "realNm": "후수천",
+         "regDate": "20180619160924",
+         "lock": false,
+         "stateCode": "1",
+         "cntAuthFail": 0,
+         "affiliatesCodes": {
+         "001": "1",
+         "002": "1"
+         }
+         },
+         "resultCode": "000",
+         "resultMsg": "success"
+         },
+         "dataHeader": {
+         "resultCode": "000",
+         "resultMessage": "조회가 완료되었습니다.",
+         "category": "",
+         "successCode": "0"
+         }
+         }
+         */
+
         //=============== 통합인증서 정상 상태 조회
         if([fidoTransaction.rtnicData[@"stateCode"] isEqualToString:SERVERCODE_AFFILIATESCODES_SUC]){
             _affiliatesCodes = fidoTransaction.rtnicData[@"affiliatesCodes"];
@@ -264,6 +293,8 @@
                               fidoTransaction.rtnResultData[@"dataBody"][@"ssoData"],
                               fidoTransaction.rtnResultData[@"dataBody"][@"affiliatesCode"],
                               @"test"];
+
+        
         /*
          "'AppScheme'://?'openURL구분값'&ssoData='SSo해쉬값'&affiliatesCode='그룹사상태정보'&goPage='이동화면구분값'"
          AppScheme : 앱의 Shcheme ID

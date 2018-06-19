@@ -78,6 +78,7 @@
 #define ERROR_AUTH_KEY_RSA_INVALID_SIZE                  8350
 
 #define ERROR_OWN_AUTH_NOT_EXIST_HP_NUM                  9000
+//#define ERROR_OWN_AUTH_NOT_EXIST_HP_NUM_MESSAGE @"휴대폰 번호가 세팅되지 않았습니다. 서버 설정에 따라 SDK에 휴대폰 번호를 설정해야 합니다."
 
 //생체 인증서 에러코드
 #define ERROR_BIO_CERT_GENERATE_KEYPAIR     10000

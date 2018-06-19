@@ -34,28 +34,6 @@
 #define ERROR_PRIKEY        (ERROR_WRAPKEY - INTERVAL_VALUE)            //0xef (-17) : not found priKey
 #define ERROR_TRYOVER_OS    (ERROR_PRIKEY - INTERVAL_VALUE)             //0xee (-18) : 인증 장치 시도 횟수 오버로 실패 (OS의 TouchID를 사용했을 경우)
 
-
-#define ERROR_BIO_PIN_Fail                          0x270F
-#define ERROR_BIO_PIN_Database_Error                0x238D
-#define ERROR_BIO_PIN_Json_Type_Error               0x238E
-#define ERROR_BIO_PIN_Undefined_Command             0x044C
-#define ERROR_BIO_PIN_Does_Not_Exist_Key_Info       0x044D
-#define ERROR_BIO_PIN_Empty_Params                  0x0834
-#define ERROR_BIO_PIN_Empty_Params_Command          0x0835
-#define ERROR_BIO_PIN_Empty_Params_Encrypt_Data     0x0836
-#define ERROR_BIO_PIN_Empty_Params_Tr_Id            0x0837
-#define ERROR_BIO_PIN_Empty_Params_Device_Id        0x0838
-#define ERROR_BIO_PIN_Empty_Params_Key_Id           0x0839
-#define ERROR_BIO_PIN_Empty_Params_Bio_Data         0x083A
-#define ERROR_BIO_PIN_Empty_Params_Os               0x083B
-#define ERROR_BIO_PIN_Verify_Fail_Auth              0x0C1D
-#define ERROR_BIO_PIN_Verify_Fail_Decrypt_Key       0x0C1E
-#define ERROR_BIO_PIN_Verify_Fail_Decrypt_Data      0x0C1F
-
-
-
-
-
 // uafclient
 #define NO_ERROR                    0x00
 #define WAIT_USER_ACTION            0x01

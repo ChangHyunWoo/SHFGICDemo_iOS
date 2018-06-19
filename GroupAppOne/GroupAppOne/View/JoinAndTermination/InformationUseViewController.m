@@ -49,13 +49,19 @@
 #pragma  - FidoTransaction Delegate
 - (void)fidoResult:(FidoTransaction*)fidoTransaction{
     FidoTransaction* tr =fidoTransaction;
+
+
+
+//    [self moveNext];
+//    return;
+
     if(tr.isOK){
         NSMutableArray* aaidList = [NSMutableArray arrayWithCapacity:0];
+
         NSArray* aaidArray = tr.rtnResultData[@"aaidAllowList"];
 
         for(NSDictionary* dict in aaidArray){
             [aaidList addObject:dict[@"aaid"]];
-            
         }
         
         // 원패스 라이브러리 사용 가능 여부.(OS버전 ,AAID 리스트 체크. )

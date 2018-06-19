@@ -27,6 +27,7 @@
 @protocol RpManagerDelegate <NSObject>
 - (NSString*)support_getTouchIDStr;
 - (NSString*)support_getFaceLicense;
+//- (NSArray*)support_getAuthnrSetList;
 - (NSInteger)support_getKeychainUtilsAccessFlag;
 - (NSInteger)support_changeAuthnrFlag;
 - (BOOL)support_getUseSamePin;
@@ -34,11 +35,6 @@
 - (int)support_getPinMaxLength;
 - (BOOL) support_isIPhoneX;
 - (BOOL) support_isExistAaidFaceId;
-- (NSInteger) support_getAuthnrDBSearchPathDirectory;
-- (NSString*)support_getTrid;
-- (NSString*)support_getDeviceId;
-- (NSString*)support_getServerUrl;
-- (NSString*)support_getPinBioServerUrl;
 @end
 
 
@@ -71,12 +67,8 @@
 - (int) getPinMaxLengthFromOnePassManager;
 - (int) getPinMaxLengthFromTKtoAsmProc;
 
-- (NSInteger) getAuthnrDBSearchPathDirectory;
-
-- (NSString*) getTrid;
-- (NSString*) getDeviceId;
-- (NSString*) getServerUrl;
-- (NSString*) getPinBioServerUrl;
+- (BOOL) isIPhoneX;
+- (BOOL) isExistAaidFaceId;
 
 
 
