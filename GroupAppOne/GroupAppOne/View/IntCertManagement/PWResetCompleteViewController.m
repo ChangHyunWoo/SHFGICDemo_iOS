@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.navigationItem.title=@"신한통합인증 비밀번호 재설정";
+    self.navigationItem.title=@"신한 올패스 비밀번호 재설정";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:NO isRightMenu:NO];
 
 }

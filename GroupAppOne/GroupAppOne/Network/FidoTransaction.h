@@ -46,25 +46,25 @@
     //#define WEBURL_SERVICEFINGERTERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joip0010.html"] //   지문이용안내
     #define WEBURL_SERVICEFINGERTERM SHIC_BIZ_URL_SERVER @"/shic/res/html/joi/joip0010.html" //   지문이용안내
     #define WEBURL_SERVICEPASSWORDTERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joip0020.html"] //   비밀번호 이용 안내
-    #define WEBURL_SERVICETERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0010.html"] //  신한통합인증 이용안내
-    #define WEBURL_SERVICEEULA [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0020.html"]  // 신한통합인증 약관 및 이용동의
-    #define WEBURL_SERVICEEULADETAIL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0030.html"]  // 신한통합인증 약관 및 이용동의 상세
-    #define WEBURL_SERVICEREGISTCOMPLETE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0040.html"]  // 신한통합인증 가입 완료
-    #define WEBURL_SERVICEPAUSE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/sto/stom0010.html"]  // 신한통합인증 서비스 정지 안내
-    #define WEBURL_SERVICEPAUSEFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/sto/stom0020.html"]  // 신한통합인증 정지 완료
-    #define WEBURL_SERVICEDISPOSAL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/can/canm0010.html"]  // 신한통합인증 해지 안내
-    #define WEBURL_SERVICEDISPOSALFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/can/canm0020.html"]  // 신한통합인증 해지 완료
+    #define WEBURL_SERVICETERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0010.html"] //  신한 올패스 이용안내
+    #define WEBURL_SERVICEEULA [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0020.html"]  // 신한 올패스 약관 및 이용동의
+    #define WEBURL_SERVICEEULADETAIL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0030.html"]  // 신한 올패스 약관 및 이용동의 상세
+    #define WEBURL_SERVICEREGISTCOMPLETE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/joi/joim0040.html"]  // 신한 올패스 가입 완료
+    #define WEBURL_SERVICEPAUSE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/sto/stom0010.html"]  // 신한 올패스 서비스 정지 안내
+    #define WEBURL_SERVICEPAUSEFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/sto/stom0020.html"]  // 신한 올패스 정지 완료
+    #define WEBURL_SERVICEDISPOSAL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/can/canm0010.html"]  // 신한 올패스 해지 안내
+    #define WEBURL_SERVICEDISPOSALFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER,@"/shic/res/html/can/canm0020.html"]  // 신한 올패스 해지 완료
 #else
     #define WEBURL_SERVICEFINGERTERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joip0010.html"] //   지문이용안내
     #define WEBURL_SERVICEPASSWORDTERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joip0020.html"] //   비밀번호 이용 안내
-    #define WEBURL_SERVICETERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0010.html"] //  신한통합인증 이용안내
-    #define WEBURL_SERVICEEULA [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0020.html"]  // 신한통합인증 약관 및 이용동의
-    #define WEBURL_SERVICEEULADETAIL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0030.html"]  // 신한통합인증 약관 및 이용동의 상세
-    #define WEBURL_SERVICEREGISTCOMPLETE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0040.html"]  // 신한통합인증 가입 완료
-    #define WEBURL_SERVICEPAUSE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/sto/stom0010.html"]  // 신한통합인증 서비스 정지 안내
-    #define WEBURL_SERVICEPAUSEFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/sto/stom0020.html"]  // 신한통합인증 정지 완료
-    #define WEBURL_SERVICEDISPOSAL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/can/canm0010.html"]  // 신한통합인증 해지 안내
-    #define WEBURL_SERVICEDISPOSALFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/can/canm0020.html"]  // 신한통합인증 해지 완료
+    #define WEBURL_SERVICETERM [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0010.html"] //  신한 올패스 이용안내
+    #define WEBURL_SERVICEEULA [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0020.html"]  // 신한 올패스 약관 및 이용동의
+    #define WEBURL_SERVICEEULADETAIL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0030.html"]  // 신한 올패스 약관 및 이용동의 상세
+    #define WEBURL_SERVICEREGISTCOMPLETE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/joi/joim0040.html"]  // 신한 올패스 가입 완료
+    #define WEBURL_SERVICEPAUSE [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/sto/stom0010.html"]  // 신한 올패스 서비스 정지 안내
+    #define WEBURL_SERVICEPAUSEFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/sto/stom0020.html"]  // 신한 올패스 정지 완료
+    #define WEBURL_SERVICEDISPOSAL [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/can/canm0010.html"]  // 신한 올패스 해지 안내
+    #define WEBURL_SERVICEDISPOSALFINISH [NSString stringWithFormat:@"%@%@",SHIC_BIZ_URL_SERVER_2,@"/shic/res/html/can/canm0020.html"]  // 신한 올패스 해지 완료
 #endif
 
 
@@ -88,8 +88,6 @@
 #define SERVERCODE_AFFILIATESCODES_DISPOSSAL @"2" //해지상태 (그룹사별)
 #define SERVERCODE_AFFILIATESCODES_PAUSE @"3" //정지상태 (그룹사별)
 
-//========== SSO 구분 Key
-#define SSOSCHEMSKEY @"IntergratedSSOTestKey"
 
 
 /** FIDO CommandType */

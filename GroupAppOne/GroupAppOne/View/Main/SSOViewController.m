@@ -11,10 +11,12 @@
 
 @interface SSOViewController ()<SSOManagerDelegate,FidoTransactionDelegate>
 {
-    NSString* _otherAppScheme;
+    NSString* _otherAppSchemeCode;
     NSDictionary *_affiliatesCodes;
-    NSDictionary *_dicTestApps;
+    NSDictionary *_dicTestAppName;
+    NSDictionary *_dicTestAppIcon;
     NSDictionary *_dicTestAppsShemes;
+    NSDictionary *_dicTestAppHost;
     BOOL isDissposal;
 }
 @property(nonatomic, strong) IBOutlet UIButton* otherBtn;
@@ -41,31 +43,40 @@
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:YES isRightMenu:NO];
 
 
-
-//    if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"]) {
-//        NSArray *urlTypes = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"];
-//    }
-    _dicTestApps = [NSDictionary dictionaryWithObjectsAndKeys:
-                    @"GroupAppOne",@"001",
-                    @"GroupAppOne2",@"002",
-                    @"GroupAppOne3",@"003"
+    _dicTestAppName = [NSDictionary dictionaryWithObjectsAndKeys:
+                    @"은행",@"001",
+                    @"카드",@"002",
+                    @"생명",@"003",
+                    @"금투",@"004"
                     , nil];
 
-    _dicTestAppsShemes = [NSDictionary dictionaryWithObjectsAndKeys:
-                    @"demoApp",@"001",
-                    @"demoApp2",@"002",
-                    @"demoApp3",@"003"
-                    , nil];
+    _dicTestAppIcon = [NSDictionary dictionaryWithObjectsAndKeys:
+                       @"ico_app_sol@3x.png",@"001",
+                       @"ico_app_fan@3x.png",@"002",
+                       @"ico_app_life@3x.png",@"003",
+                       @"ico_app_ia@3x.png",@"004"
+                       , nil];
 
-
-    /*=================== 그룹사 앱 목록 Init.
-     * 상태별 아이콘 명
-     * ico_sso_login_dis.png
-     * ico_sso_login.png
+    /* 그룹사 앱 정보.   ****** 현재 데모기준 1,2,3 : 은행/카드/생명
+     은행 : iphoneSbank :// null
+     카드 : shinhan-appcard :// blcsso
+     생명 : shlic (운영) shlicT (테스트) :// smtsso
+     금투 : NewShinhanAlpha :// shasso
      */
-    self.otherLbl.text = [[_dicTestApps allValues] objectAtIndex:0];
-    self.otherLbl2.text = [[_dicTestApps allValues] objectAtIndex:1];
-    self.otherLbl3.text = [[_dicTestApps allValues] objectAtIndex:2];
+    _dicTestAppsShemes = [NSDictionary dictionaryWithObjectsAndKeys:
+                    @"iphoneSbank",@"001",
+                    @"shinhan-appcard",@"002",
+                    @"shlicT",@"003",
+                    @"NewShinhanAlpha",@"004"
+                    , nil];
+
+    _dicTestAppHost = [NSDictionary dictionaryWithObjectsAndKeys:
+                          @"TestString",@"001", //************ 은행 Host 구분 없음.
+                          @"blcsso",@"002",
+                          @"smtsso",@"003",
+                          @"shasso",@"004"
+                          , nil];
+
 
     FidoTransaction *tranjection = [[FidoTransaction alloc] init];
     tranjection.delegate=self;
@@ -95,16 +106,42 @@
 //================= 앱상태 업데이트.
 -(void)initAppList:(NSDictionary*)dicAffiliatesCodes
 {
-    for(NSString *strCode in [dicAffiliatesCodes allKeys]){
-        if([strCode isEqualToString:[[_dicTestApps allKeys] objectAtIndex:0]]){
-            [self updateIcon:[dicAffiliatesCodes objectForKey:strCode] setButton:_otherState];
+    int idx = 0;
+    for(NSString *strCode in [_dicTestAppName allKeys]){
+
+
+        //===================== 현재앱을 제외
+        NSString* bundleID=[[[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleURLTypes"] objectAtIndex:0] objectForKey:@"CFBundleURLSchemes"] objectAtIndex:0];
+        if( [ bundleID isEqualToString: [_dicTestAppsShemes objectForKey:strCode]]){
+            continue;
         }
-        else if([strCode isEqualToString:[[_dicTestApps allKeys] objectAtIndex:1]]){
-            [self updateIcon:[dicAffiliatesCodes objectForKey:strCode] setButton:_otherState2];
+
+        /*=================== 그룹사 앱 목록 Init.
+         * 상태별 아이콘 명
+         * ico_sso_login_dis.png
+         * ico_sso_login.png
+         */
+        switch (idx) {
+            case 0:
+                self.otherLbl.text = [_dicTestAppName objectForKey:strCode];
+                [self.otherBtn setTitle:strCode forState:UIControlStateNormal];
+                [self.otherBtn setBackgroundImage:[UIImage imageNamed:[_dicTestAppIcon objectForKey:strCode]] forState:UIControlStateNormal];
+                [self updateIcon:[dicAffiliatesCodes objectForKey:strCode] setButton:_otherState];
+                break;
+            case 1:
+                self.otherLbl2.text = [_dicTestAppName objectForKey:strCode];
+                [self.otherBtn2 setTitle:strCode forState:UIControlStateNormal];
+                [self.otherBtn2 setBackgroundImage:[UIImage imageNamed:[_dicTestAppIcon objectForKey:strCode]] forState:UIControlStateNormal];
+                [self updateIcon:[dicAffiliatesCodes objectForKey:strCode] setButton:_otherState2];
+                break;
+            case 2:
+                self.otherLbl3.text = [_dicTestAppName objectForKey:strCode];
+                [self.otherBtn3 setTitle:strCode forState:UIControlStateNormal];
+                [self.otherBtn3 setBackgroundImage:[UIImage imageNamed:[_dicTestAppIcon objectForKey:strCode]] forState:UIControlStateNormal];
+                [self updateIcon:[dicAffiliatesCodes objectForKey:strCode] setButton:_otherState3];
+                break;
         }
-        else if([strCode isEqualToString:[[_dicTestApps allKeys] objectAtIndex:2]]){
-            [self updateIcon:[dicAffiliatesCodes objectForKey:strCode] setButton:_otherState3];
-        }
+        idx++;
     }
 }
 
@@ -130,11 +167,6 @@
 #pragma -buttonEvent
 -(IBAction)otherBtnTouchUpInside:(id)sender
 {
-    //************************** 전체 해지 일 경우.
-    if(isDissposal){
-        RUN_ALERT_PANEL(@"신한통합인증 상태가 해지상태 입니다.");
-        return;
-    }
 
     BOOL isLogin = [[SHICUser defaultUser] getBoolean:KEY_LOGIN];
     /*
@@ -143,34 +175,18 @@
      */
     BOOL isServiceOn = YES;
 
-    if([sender tag] == 0){
-        _otherAppScheme=[_dicTestAppsShemes objectForKey:[[_dicTestApps allKeys] objectAtIndex:0]];
-        if([[_affiliatesCodes objectForKey:[[_dicTestApps allKeys] objectAtIndex:0] ] isEqualToString:SERVERCODE_AFFILIATESCODES_PAUSE]){
-            isServiceOn=NO;
-        }
-    }
-    else if([sender tag] == 1){
-        _otherAppScheme=[_dicTestAppsShemes objectForKey:[[_dicTestApps allKeys] objectAtIndex:1]];
-        if([[_affiliatesCodes objectForKey:[[_dicTestApps allKeys] objectAtIndex:1]] isEqualToString:SERVERCODE_AFFILIATESCODES_PAUSE]){
-            isServiceOn=NO;
-        }
-    }
-    else if([sender tag] == 2){
-        _otherAppScheme=[_dicTestAppsShemes objectForKey:[[_dicTestApps allKeys] objectAtIndex:2]];
+    // Schmes Init
+    NSString *senderCode=[sender titleLabel].text;
 
-        if([[_affiliatesCodes objectForKey:[[_dicTestApps allKeys] objectAtIndex:2]] isEqualToString:SERVERCODE_AFFILIATESCODES_PAUSE]){
-            isServiceOn=NO;
-        }
-    }
-    else{
-        isServiceOn=NO;
-    }
-
-    //===================== 현재앱을 선택 했다면 Return
-    NSString* bundleID=[[[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleURLTypes"] objectAtIndex:0] objectForKey:@"CFBundleURLSchemes"] objectAtIndex:0];
-
-    if( [ bundleID isEqualToString:_otherAppScheme]){
+    // ** 예외처리.
+    if(senderCode.length <= 0){
         return;
+    }
+
+    _otherAppSchemeCode=senderCode;
+
+    if([[_affiliatesCodes objectForKey:senderCode ] isEqualToString:SERVERCODE_AFFILIATESCODES_PAUSE]){
+        isServiceOn=NO;
     }
 
     //통합인증 로그인 및 링크앱의 서비스 가입여부가 YES일 경우만 SSO를 진행한다.
@@ -188,11 +204,19 @@
 //            }
 
             UIViewController *rootController = [[UIApplication sharedApplication] keyWindow].rootViewController;
+            NSString *strMsg ;
+            //************************** 전체 해지&미가입 일 경우.
+            if(isDissposal){
+                strMsg=@"신한 올패스 가입 정보가 없습니다. 서비스를 다시 이용하시려면 가입 또는 등록을 해주시기 바랍니다.";
+            }
+            else{
+                strMsg=@"신한 올패스 서비스 이용 정지 상태입니다. 서비스를 다시 이용하시려면 신한 올패스 이용 등록을 해주시기 바랍니다.";
+            }
 
             //=================== 3. 통합인증서 정보가 없는 경우
             UIAlertController * alert=   [UIAlertController
                                           alertControllerWithTitle:@"알림"
-                                          message:@"신한통합인증 서비스 이용 정지 상태입니다. 서비스를 다시 이용하시려면 신하통합인증 이용 등록을 해주시기 바랍니다."
+                                          message:strMsg
                                           preferredStyle:UIAlertControllerStyleAlert];
 
 
@@ -203,14 +227,14 @@
                                  {
                                      [alert dismissViewControllerAnimated:YES completion:nil];
 
-                                     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://",_otherAppScheme]];
+                                     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://",[_dicTestAppsShemes valueForKey:_otherAppSchemeCode]]];
 
                                      if( [[UIApplication sharedApplication] canOpenURL:url] == YES ){
                                          //================= 데이터를 보낸다.
                                          [[UIApplication sharedApplication] openURL:url];
                                      }else{
                                          //================= 설치되지 않았음. 앱스토어로 이동
-                                         NSString *strMsg=[NSString stringWithFormat:@"%@ 스토어 이동",_otherAppScheme];
+                                         NSString *strMsg=[NSString stringWithFormat:@"%@ 스토어 이동",[_dicTestAppName valueForKey:_otherAppSchemeCode]];
                                          RUN_ALERT_PANEL( strMsg  ) ;
                                      }
 
@@ -277,7 +301,8 @@
     }
     else{
         [self initAppList:nil];
-        RUN_ALERT_PANEL(fidoTransaction.rtnMsg);
+//        RUN_ALERT_PANEL(fidoTransaction.rtnMsg);
+        [CertificateManager checkRequestFido:fidoTransaction];
     }
 
 }
@@ -285,17 +310,20 @@
 - (void)fidoResult:(FidoTransaction*)fidoTransaction
 {
     if(fidoTransaction.isOK){
-        NSMutableDictionary *userInfo= [UserInfo getUserInfo];
-        NSString* icid = [userInfo objectForKey:KEY_ICID];
-        NSString* queryStr = [NSString stringWithFormat:@"%@://?%@&ssoData=%@&affiliatesCode=%@&goPage=%@",
-                              _otherAppScheme,
-                              SSOSCHEMSKEY,
-                              fidoTransaction.rtnResultData[@"dataBody"][@"ssoData"],
+//        NSMutableDictionary *userInfo= [UserInfo getUserInfo];
+//        NSString* icid = [userInfo objectForKey:KEY_ICID];
+
+        NSString* queryStr = [NSString stringWithFormat:@"%@://?host=%@&affiliatesCode=%@&&ssoData=%@",
+                              [_dicTestAppsShemes valueForKey:_otherAppSchemeCode],
+                              [_dicTestAppHost objectForKey:_otherAppSchemeCode],
                               fidoTransaction.rtnResultData[@"dataBody"][@"affiliatesCode"],
-                              @"test"];
+                              fidoTransaction.rtnResultData[@"dataBody"][@"ssoData"]
+                              ];
 
         
         /*
+         iphoneSbank://?affiliatesCode=그룹사코드&ssoData=sso데이터&ssoTime=System.currentTimeMillis()
+
          "'AppScheme'://?'openURL구분값'&ssoData='SSo해쉬값'&affiliatesCode='그룹사상태정보'&goPage='이동화면구분값'"
          AppScheme : 앱의 Shcheme ID
          선택  : openURL구분값 : OpenUrl 시 통합인증에 대한 OpenURL 구분 값 (AppDelegate openURL에서 통합인증 하기 위한 요청인지 구분 : 그룹사별 정의 필요)
@@ -312,12 +340,13 @@
             [[UIApplication sharedApplication] openURL:url];
         }else{
             //================= 설치되지 않았음. 앱스토어로 이동
-            NSString *strMsg=[NSString stringWithFormat:@"%@ 스토어 이동",_otherAppScheme];
+            NSString *strMsg=[NSString stringWithFormat:@"%@ 스토어 이동",[_dicTestAppName valueForKey:_otherAppSchemeCode]];
             RUN_ALERT_PANEL( strMsg  ) ;
         }
     }
     else{
-        RUN_ALERT_PANEL(fidoTransaction.rtnMsg);
+//        RUN_ALERT_PANEL(fidoTransaction.rtnMsg);
+        [CertificateManager checkRequestFido:fidoTransaction];
     }
 }
 
@@ -329,7 +358,7 @@
     //3. 암호화 한 SSO정보를 링크하고자 하는 앱의 스키마뒤에 Base64 인코딩해서 정보를 넘긴다.
     NSData* encodingData = [strSamlToken dataUsingEncoding:NSUTF8StringEncoding];
     NSString* base64Data = [encodingData base64EncodedString];
-    NSString* queryStr = [NSString stringWithFormat:@"%@data?%@&goPage=%@",_otherAppScheme, base64Data,@"test"];
+    NSString* queryStr = [NSString stringWithFormat:@"%@data?%@&goPage=%@",[_dicTestAppsShemes valueForKey:_otherAppSchemeCode], base64Data,@"test"];
     NSURL *url = [NSURL URLWithString:queryStr];
 
     if( [[UIApplication sharedApplication] canOpenURL:url] == YES ){

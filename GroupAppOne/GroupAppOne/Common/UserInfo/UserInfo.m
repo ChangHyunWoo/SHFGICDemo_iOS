@@ -131,7 +131,7 @@ NSMutableDictionary *userList;
     else{
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:@"OnePass"
-                                      message:@"신한통합인증 지문이 등록되어 \n 있지 않습니다. \n 신한통합인증 로그인을 지문으로 설정 하시겠습니까?"
+                                      message:@"신한 올패스 지문이 등록되어 \n 있지 않습니다. \n 신한 올패스 로그인을 지문으로 설정 하시겠습니까?"
                                       preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction* cancel = [UIAlertAction

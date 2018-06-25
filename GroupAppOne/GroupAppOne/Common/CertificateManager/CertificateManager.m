@@ -15,7 +15,7 @@
 UIViewController *_rootController;
 UINavigationController *_rootNavigationController ;
 
-#define MESSAGE_LOGINLOCK @"신한통합인증 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다. 통합인증비밀번호 제설정 화면으로 이동하시겠습니까?"
+#define MESSAGE_LOGINLOCK @"신한 올패스 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다. 통합인증비밀번호 제설정 화면으로 이동하시겠습니까?"
 
 @implementation CertificateManager
 
@@ -137,7 +137,7 @@ UINavigationController *_rootNavigationController ;
     //================ 서비스 잠금 처리 시 얼럿 후 진행 불가
     BOOL isLock = [icData[@"lock"] integerValue];
     if(isLock){
-        RUN_ALERT_PANEL(@"신한통합인증 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다.");
+        RUN_ALERT_PANEL(@"신한 올패스 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다.");
         return;
     }
 
@@ -189,7 +189,7 @@ UINavigationController *_rootNavigationController ;
             if([[[UserInfo getUserInfo] objectForKey:KEY_ICID]
                 isEqualToString:icid]){
                 UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"안내"
-                                                                  message:@"고객님은 이미 신한통합인증 서비스에 가입되어 있습니다. \n통합인증서비스 로그인 하시겠습니까?"
+                                                                  message:@"고객님은 이미 신한 올패스 서비스에 가입되어 있습니다. \n통합인증서비스 로그인 하시겠습니까?"
                                                                  delegate:self
                                                         cancelButtonTitle:@"확인"
                                                         otherButtonTitles:nil];
@@ -282,7 +282,7 @@ UINavigationController *_rootNavigationController ;
     //====================== 해지된 상태
     if([gStateCode isEqualToString:SERVERCODE_AFFILIATESCODES_DISPOSSAL]){
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                          message:@"신한통합 인증 서비스가 해지되었습니다.\n 신한통힙인증서비스를 다시 이용하시려면 \n 신한통합인증 가입을 해주시기 바랍니다."
+                                                          message:@"신한통합 인증 서비스가 해지되었습니다.\n 신한통힙인증서비스를 다시 이용하시려면 \n 신한 올패스 가입을 해주시기 바랍니다."
                                                          delegate:nil
                                                 cancelButtonTitle:@"확인"
                                                 otherButtonTitles:nil];
@@ -293,7 +293,7 @@ UINavigationController *_rootNavigationController ;
     //======================  2) 만기일이 지난경우
     else if(eValue - cValue < 0 && icData[@"expiryDate"]  ){
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                          message:@"신한통합인증 서비스 만기일이 \n자났습니다. 통합인증 서비스를 \n가입해 주시기 바랍니다."
+                                                          message:@"신한 올패스 서비스 만기일이 \n자났습니다. 통합인증 서비스를 \n가입해 주시기 바랍니다."
                                                          delegate:nil
                                                 cancelButtonTitle:@"확인"
                                                 otherButtonTitles:nil];
@@ -304,7 +304,7 @@ UINavigationController *_rootNavigationController ;
     //====================== 정지된 상태
     else if([gStateCode isEqualToString:SERVERCODE_AFFILIATESCODES_PAUSE]){
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                          message:@"신한통합 인증 서비스가 일시 중지 되었습니다.\n 신한통힙인증서비스를 다시 이용하시려면 \n 신한통합인증 등록을 해주시기 바랍니다."
+                                                          message:@"신한통합 인증 서비스가 일시 중지 되었습니다.\n 신한통힙인증서비스를 다시 이용하시려면 \n 신한 올패스 등록을 해주시기 바랍니다."
                                                          delegate:nil
                                                 cancelButtonTitle:@"확인"
                                                 otherButtonTitles:nil];
@@ -316,7 +316,7 @@ UINavigationController *_rootNavigationController ;
     //====================== 1) 만기일이 1개월 전일경우
     else if( (eValue - cValue > 0 && eValue - cValue <= 30) && icData[@"expiryDate"] ){
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                          message:@"신한통합인증 서비스 만기일이 N일\n남았습니다. 통합인증 서비스 이용\n기간을 연장하시겠습니까?"
+                                                          message:@"신한 올패스 서비스 만기일이 N일\n남았습니다. 통합인증 서비스 이용\n기간을 연장하시겠습니까?"
                                                          delegate:nil
                                                 cancelButtonTitle:@"취소"
                                                 otherButtonTitles:@"확인",nil];
@@ -328,7 +328,7 @@ UINavigationController *_rootNavigationController ;
     //================ 서비스 잠금 처리 시 얼럿 후 진행 불가
     BOOL isLock = [icData[@"lock"] integerValue];
     if(isLock){
-        [self doResetPassword:@"신한통합인증 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다. 통합인증비밀번호 제설정 화면으로 이동하시겠습니까?"];
+        [self doResetPassword:@"신한 올패스 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다. 통합인증비밀번호 제설정 화면으로 이동하시겠습니까?"];
         return NO;
     }
 
@@ -388,7 +388,7 @@ UINavigationController *_rootNavigationController ;
     else if([fidoTransaction.rtnResultCode isEqualToString:@"AP001"]){
         //Fail Count [5] 초과시 | lock = true  비밀번호 재 설정.
         NSString *strFailMsg = [NSString stringWithFormat
-                                :@"신한통합인증 비밀번호가 일치하지 \n 않습니다. (오류횟수 : %ld 회)\n  ※ 누적 5회 오류 시 서비스가 잠금 처리됩니다."
+                                :@"신한 올패스 비밀번호가 일치하지 \n 않습니다. (오류횟수 : %ld 회)\n  ※ 누적 5회 오류 시 서비스가 잠금 처리됩니다."
                                 ,failCount
                                 ];
         RUN_ALERT_PANEL(strFailMsg);

@@ -17,7 +17,7 @@
 #import "FidoTransaction.h"
 #import "AppDelegate.h"
 
-#define MESSAGE_LOGINLOCK @"신한통합인증 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다. 통합인증비밀번호 제설정 화면으로 이동하시겠습니까?"
+#define MESSAGE_LOGINLOCK @"신한 올패스 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다. 통합인증비밀번호 제설정 화면으로 이동하시겠습니까?"
 
 @interface IntergratedCertificationViewController () <SecuKeypadDelegate, FidoTransactionDelegate,CertificateDelegate>
 {

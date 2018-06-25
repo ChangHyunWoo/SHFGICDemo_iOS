@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title=@"신한통합인증 PC 인증";
+    self.navigationItem.title=@"신한 올패스 PC 인증";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:YES isRightMenu:YES];
     
     self.barcodeTypes = TFBarcodeTypeEAN8 | TFBarcodeTypeEAN13 | TFBarcodeTypeUPCA | TFBarcodeTypeUPCE | TFBarcodeTypeQRCODE;

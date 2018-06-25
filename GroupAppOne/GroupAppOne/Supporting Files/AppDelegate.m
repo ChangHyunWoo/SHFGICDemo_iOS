@@ -81,9 +81,14 @@
     //===================== 앱 Target URL 셋팅.
     [MainViewController updateProperty];
 
-
+    NSString *strAppHost;
+#ifdef TEST_GROUP1
+    strAppHost=@"host=TestString"; // 은행
+#else
+    strAppHost=@"host=blcsso"; // 카드
+#endif
     //========================== 통합인증 SSO 요청을 구분하기 위한 키값 매칭.
-    if([urlQuery hasPrefix:SSOSCHEMSKEY]){
+    if([urlQuery hasPrefix:strAppHost]){
         /*
 
          점검 항목
@@ -106,7 +111,7 @@
             //=================== 3. 통합인증서 정보가 없는 경우
             UIAlertController * alert=   [UIAlertController
                                           alertControllerWithTitle:@"알림"
-                                          message:@"신한통합인증 서비스를 바로 이용 하시려면 앱 로그아웃 후 이용 가능 합니다. 신한통합인증으로 로그인 하시겠습니까?"
+                                          message:@"신한 올패스 서비스를 바로 이용 하시려면 앱 로그아웃 후 이용 가능 합니다. 신한 올패스으로 로그인 하시겠습니까?"
                                           preferredStyle:UIAlertControllerStyleAlert];
 
             UIAlertAction* cancel = [UIAlertAction
@@ -147,7 +152,7 @@
             //=================== 3. 통합인증서 정보가 없는 경우
             UIAlertController * alert=   [UIAlertController
                                           alertControllerWithTitle:@"알림"
-                                          message:@"신한통합인증 가입 정보가 없습니다. 신한통합인증 서비스를 이용하시려면 가입 또는 등록해 주시기 바랍니다."
+                                          message:@"신한 올패스 가입 정보가 없습니다. 신한 올패스 서비스를 이용하시려면 가입 또는 등록해 주시기 바랍니다."
                                           preferredStyle:UIAlertControllerStyleAlert];
 
             UIAlertAction* cancel = [UIAlertAction

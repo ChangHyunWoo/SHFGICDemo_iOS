@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title=@"신한통합인증 정지 안내";
+    self.title=@"신한 올패스 정지 안내";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:YES isRightMenu:NO];
     [D_CA createWebview:self.viewContents setUrl:WEBURL_SERVICEPAUSE];
 }

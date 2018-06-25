@@ -34,9 +34,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title=@"신한통합인증센터";
+    self.navigationItem.title=@"신한 올패스센터";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:YES isRightMenu:NO];
-    self.tableViewElements = [NSMutableArray arrayWithObjects: @"신한통합인증 가입/등록", @"신한통합인증 해지/정지", @"신한통합인증 비밀번호 재설정", @"신한통합인증 로그인 설정",@"QR Test", nil];
+    self.tableViewElements = [NSMutableArray arrayWithObjects: @"신한 올패스 가입/등록", @"신한 올패스 해지/정지", @"신한 올패스 비밀번호 재설정", @"신한 올패스 로그인 설정",@"QR Test", nil];
 
     _tableHeight.constant = self.tableViewElements.count * self.tableView.rowHeight;
     [self.tableView setNeedsLayout];
@@ -105,7 +105,7 @@
             [self.navigationController pushViewController:resetView animated:YES];
         }
     }
-    //신한통합인증 로그인 설정
+    //신한 올패스 로그인 설정
     else if(indexPath.row == 3){
         // 미 로그인 진입 불가
         if(![[SHICUser defaultUser] getBoolean:KEY_LOGIN]){
@@ -212,7 +212,7 @@
 
 
     [self popupSelectLogion:@"QR 스캔이 완료되었습니다."];
-//    [self popupSelectLogion:@"QR 스캔이 완료되었습니다. 신한통합인증 PC 인증을 위한 비밀번호 또는 지문 인증 방식을 선택해 주세요."];
+//    [self popupSelectLogion:@"QR 스캔이 완료되었습니다. 신한 올패스 PC 인증을 위한 비밀번호 또는 지문 인증 방식을 선택해 주세요."];
 
 //    IntergratedCertificationViewController* intCertViewController = [[IntergratedCertificationViewController alloc] init];
 //    [intCertViewController callTypeSet:CallTypeQRAuth];

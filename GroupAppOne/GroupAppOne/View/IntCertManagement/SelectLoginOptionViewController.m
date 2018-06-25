@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = @"신한통합인증 로그인 설정";
+    self.title = @"신한 올패스 로그인 설정";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:YES isRightMenu:NO];
 
     [D_CA setButtonBorder:_cancelBtn setBorderColor:@"#161c34"];
@@ -101,7 +101,7 @@
     else{
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:@"OnePass"
-                                      message:@"신한통합인증 지문이 등록되어 \n 있지 않습니다. \n 신한통합인증 로그인을 지문으로 설정 하시겠습니까?"
+                                      message:@"신한 올패스 지문이 등록되어 \n 있지 않습니다. \n 신한 올패스 로그인을 지문으로 설정 하시겠습니까?"
                                       preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction* cancel = [UIAlertAction
@@ -168,7 +168,7 @@
 
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:@"OnePass"
-                                  message:@"신한통합인증 로그인 설정이 \n  변경되었습니다. \n 변경하신 로그인 수단으로 다시 로그인해 주세요."
+                                  message:@"신한 올패스 로그인 설정이 \n  변경되었습니다. \n 변경하신 로그인 수단으로 다시 로그인해 주세요."
                                   preferredStyle:UIAlertControllerStyleAlert];
 
     UIAlertAction* ok = [UIAlertAction

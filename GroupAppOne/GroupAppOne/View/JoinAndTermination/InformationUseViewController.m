@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title=@"신한통합인증 이용안내";
+    self.navigationItem.title=@"신한 올패스 이용안내";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:YES isRightMenu:YES];
     [D_CA createWebview:self.viewContents setUrl:WEBURL_SERVICETERM];
 }
@@ -37,7 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 신한통합인증 해지 버튼 액션
+#pragma mark - 신한 올패스 해지 버튼 액션
 - (IBAction)joinTouchUpInside:(id)sender{
     //To-do
     FidoTransaction* transaction = [[FidoTransaction alloc] init];

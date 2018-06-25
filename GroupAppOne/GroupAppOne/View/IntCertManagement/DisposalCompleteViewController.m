@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title=@"신한통합인증 해지 완료";
+    self.title=@"신한 올패스 해지 완료";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:NO isRightMenu:NO];
     [D_CA createWebview:self.viewContents setUrl:WEBURL_SERVICEDISPOSALFINISH];
 }

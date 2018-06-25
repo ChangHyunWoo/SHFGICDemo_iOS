@@ -17,9 +17,9 @@
 
 #import <IntergratedCertification/IntergratedCertification.h>
 
-#define D_Title_Confirm @"신한통합인증 비밀번호 확인"
-#define D_Title_Normal @"신한통합인증 비밀번호 입력"
-#define D_Title_ReInput @"신한통합인증 비밀번호 재 입력"
+#define D_Title_Confirm @"신한 올패스 비밀번호 확인"
+#define D_Title_Normal @"신한 올패스 비밀번호 입력"
+#define D_Title_ReInput @"신한 올패스 비밀번호 재 입력"
 
 #define D_alertLbl_Normal @"비밀번호 6자리 숫자를 입력해 주세요."
 #define D_alertLbl_InputConfirm @"비밀번호 6자리 숫자를 다시 입력해 주세요."
@@ -313,12 +313,12 @@
         
         //Fail Count [5] 초과시 | lock = true  비밀번호 재 설정.
         if(isLock){
-            RUN_ALERT_PANEL(@"신한통합인증 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다.");
+            RUN_ALERT_PANEL(@"신한 올패스 비밀번호 입력제한\n 횟수 초과로 인해 서비스가 잠금 상태가 되었습니다.");
         }
         else if([fidoTransaction.rtnResultCode isEqualToString:@"RP002"] || [fidoTransaction.rtnResultCode isEqualToString:@"AP001"]){
             //Fail Count [5] 초과시 | lock = true  비밀번호 재 설정.
             NSString *strFailMsg = [NSString stringWithFormat
-                                    :@"신한통합인증 비밀번호가 일치하지 \n 않습니다. (오류횟수 : %ld 회)\n  ※ 누적 5회 오류 시 서비스가 잠금 처리됩니다."
+                                    :@"신한 올패스 비밀번호가 일치하지 \n 않습니다. (오류횟수 : %ld 회)\n  ※ 누적 5회 오류 시 서비스가 잠금 처리됩니다."
                                     ,failCount
                                     ];
             RUN_ALERT_PANEL(strFailMsg);

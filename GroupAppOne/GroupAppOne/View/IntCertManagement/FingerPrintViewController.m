@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title=@"신한통합인증 지문 인증";
+    self.navigationItem.title=@"신한 올패스 지문 인증";
     [MainNavigationController setNavigationBackButton:self.navigationController setItems:self.navigationItem setDelegate:self isBack:NO isRightMenu:YES];
     
 //    OnePassManager* onePassManager = [OnePassManager sharedSingleton];

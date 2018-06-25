@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription - 2</key>
-	<string>아이폰 설정 &gt; AppName &gt; 사진에서 설정을 변경할 수 있습니다.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>아이폰 설정 &gt; AppName &gt; 카메라에서 설정을 변경할 수 있습니다.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -29,7 +25,7 @@
 			<string>com.shic.demoApp</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>demoApp</string>
+				<string>iphoneSbank</string>
 			</array>
 		</dict>
 	</array>
@@ -37,7 +33,9 @@
 	<string>1.0.0</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>demoApp2</string>
+		<string>iphoneSbank</string>
+		<string>shinhan-appcard</string>
+		<string>shlicT</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -58,8 +56,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>아이폰 설정 &gt; AppName &gt; 카메라에서 설정을 변경할 수 있습니다.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>this app wants Photolibrary</string>
+	<key>NSPhotoLibraryUsageDescription - 2</key>
+	<string>아이폰 설정 &gt; AppName &gt; 사진에서 설정을 변경할 수 있습니다.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>MainViewController</string>
 	<key>UIRequiredDeviceCapabilities</key>

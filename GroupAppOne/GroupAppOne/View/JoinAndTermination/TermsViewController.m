@@ -51,7 +51,7 @@
     //취소시의 처리
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:@"알림"
-                                 message:@"신한통합인증 서비스 가입을 취소하시겠습니까?"
+                                 message:@"신한 올패스 서비스 가입을 취소하시겠습니까?"
                                  preferredStyle:UIAlertControllerStyleAlert];
     
     //Add Buttons
