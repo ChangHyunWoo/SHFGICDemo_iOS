@@ -66,15 +66,15 @@
     _dicTestAppsShemes = [NSDictionary dictionaryWithObjectsAndKeys:
                     @"iphoneSbank",@"001",
                     @"shinhan-appcard",@"002",
-                    @"shlicT",@"003",
-                    @"NewShinhanAlpha",@"004"
+                    @"NewShinhanAlpha",@"003",
+                    @"shlicT",@"004"
                     , nil];
 
     _dicTestAppHost = [NSDictionary dictionaryWithObjectsAndKeys:
                           @"TestString",@"001", //************ 은행 Host 구분 없음.
                           @"blcsso",@"002",
-                          @"smtsso",@"003",
-                          @"shasso",@"004"
+                          @"shasso",@"003",
+                          @"smtsso",@"004"
                           , nil];
 
 
