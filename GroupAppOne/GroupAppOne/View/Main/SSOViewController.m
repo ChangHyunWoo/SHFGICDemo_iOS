@@ -46,15 +46,15 @@
     _dicTestAppName = [NSDictionary dictionaryWithObjectsAndKeys:
                     @"은행",@"001",
                     @"카드",@"002",
-                    @"생명",@"003",
-                    @"금투",@"004"
+                    @"금투",@"003",
+                    @"생명",@"004"
                     , nil];
 
     _dicTestAppIcon = [NSDictionary dictionaryWithObjectsAndKeys:
                        @"ico_app_sol@3x.png",@"001",
                        @"ico_app_fan@3x.png",@"002",
-                       @"ico_app_life@3x.png",@"003",
-                       @"ico_app_ia@3x.png",@"004"
+                       @"ico_app_ia@3x.png",@"003",
+                       @"ico_app_life@3x.png",@"004"
                        , nil];
 
     /* 그룹사 앱 정보.   ****** 현재 데모기준 1,2,3 : 은행/카드/생명
