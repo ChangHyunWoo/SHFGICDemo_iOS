@@ -37,6 +37,7 @@ typedef enum CertificateCommand {
 +(BOOL)checkicDataAuth:(NSDictionary*)icData;
 //Fido 요청 시 Validation
 +(void)checkRequestFido:(FidoTransaction*)fidoTransaction;
+
 @end
 
 @protocol CertificateDelegate <NSObject>

@@ -131,6 +131,7 @@ typedef enum _FidoVerify {
 
 @interface FidoTransaction : NSObject
 @property (assign, nonatomic) id<FidoTransactionDelegate> delegate;
+
 -(void)verifyCertification:(NSString*)ciOrIcid type:(FidoVerifyType)type;
 -(void)inquireCertification:(NSString*)icid;
 -(void)requestPinCheck:(NSString*)pin;

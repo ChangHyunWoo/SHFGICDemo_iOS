@@ -38,66 +38,66 @@ UINavigationController *_rootNavigationController ;
 // 인증서 상태 체크 Tranjection
 #pragma Verify Method
 
--(void)requestVerify:(FidoVerifyType)verifyType
-{
-    NSString *icid=nil;
-    NSMutableDictionary *userInfo= [UserInfo getUserInfo];
-    icid = [userInfo objectForKey:KEY_ICID];
-
-    //통합인증 서비스 가입상태 조회
-    FidoTransaction* transaction = [[FidoTransaction alloc] init];
-    transaction.verifyType=self.verifyType;
-    transaction.delegate = self.delegate;
-    [transaction verifyCertification:icid type:verifyType];
-}
-
-
-- (void)verifyResult:(BOOL)isOK message:(NSString*)msg data:(NSDictionary*)dataBody
-//- (void)verifyResult:(BOOL)isOK message:(NSString*)msg data:(NSDictionary*)resultData
-{
-
-    NSLog(@"#ltest +++++++++++++++++++++++++++=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-    // =============== 결과 저장
-    self.resultCode=isOK;
-    if(isOK){
-        if(
-        _commendType == CertificateManageCommandTypeRegist ||               // 가입
-        _commendType == CertificateManageCommandTypeSearchPassword ||       // 비밀번호 찾기
-        _commendType == CertificateManageCommandTypeSearchPassword2         // 비밀번호 찾기 Step2
-           ){
-//            [self checkicDataRegist:dataBody[@"icData"]];
-        }
-        else{
-            //================== 인증서 상태 체크 후 결과 콜백.
-            if([CertificateManager checkicDataAuth:dataBody[@"icData"]]){
-
-            }
-            else{
-
-
-            }
-        }
-        
-    }
-    else{
-        RUN_ALERT_PANEL(msg);
-    }
-
-
-    if([self.delegate respondsToSelector:@selector(CertificateResult:)]){
-        [self.delegate CertificateResult:self];
-    }
-}
-
-// updateicData 전달.
-- (void)updateicData:(FidoTransaction*)fidoTransaction
-{
-
-    if([self.delegate respondsToSelector:@selector(updateicData:)]){
-        [self.delegate updateicData:fidoTransaction];
-    }
-
-}
+//-(void)requestVerify:(FidoVerifyType)verifyType
+//{
+//    NSString *icid=nil;
+//    NSMutableDictionary *userInfo= [UserInfo getUserInfo];
+//    icid = [userInfo objectForKey:KEY_ICID];
+//
+//    //통합인증 서비스 가입상태 조회
+//    FidoTransaction* transaction = [[FidoTransaction alloc] init];
+//    transaction.verifyType=self.verifyType;
+//    transaction.delegate = self.delegate;
+//    [transaction verifyCertification:icid type:verifyType];
+//}
+//
+//
+//- (void)verifyResult:(BOOL)isOK message:(NSString*)msg data:(NSDictionary*)dataBody
+////- (void)verifyResult:(BOOL)isOK message:(NSString*)msg data:(NSDictionary*)resultData
+//{
+//
+//    NSLog(@"#ltest +++++++++++++++++++++++++++=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+//    // =============== 결과 저장
+//    self.resultCode=isOK;
+//    if(isOK){
+//        if(
+//        _commendType == CertificateManageCommandTypeRegist ||               // 가입
+//        _commendType == CertificateManageCommandTypeSearchPassword ||       // 비밀번호 찾기
+//        _commendType == CertificateManageCommandTypeSearchPassword2         // 비밀번호 찾기 Step2
+//           ){
+////            [self checkicDataRegist:dataBody[@"icData"]];
+//        }
+//        else{
+//            //================== 인증서 상태 체크 후 결과 콜백.
+//            if([CertificateManager checkicDataAuth:dataBody[@"icData"]]){
+//
+//            }
+//            else{
+//
+//
+//            }
+//        }
+//
+//    }
+//    else{
+//        RUN_ALERT_PANEL(msg);
+//    }
+//
+//
+//    if([self.delegate respondsToSelector:@selector(CertificateResult:)]){
+//        [self.delegate CertificateResult:self];
+//    }
+//}
+//
+//// updateicData 전달.
+//- (void)updateicData:(FidoTransaction*)fidoTransaction
+//{
+//
+//    if([self.delegate respondsToSelector:@selector(updateicData:)]){
+//        [self.delegate updateicData:fidoTransaction];
+//    }
+//
+//}
 
 /*  인증서 상태 체크(가입 시)
  *
